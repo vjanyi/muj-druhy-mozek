@@ -50,7 +50,7 @@ const LandingPage = () => {
         </p>
         <Button 
           className="cta-button"
-          onClick={() => window.open('https://instagram.com', '_blank')}
+          onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
         >
           Sleduj, jak to stavím v praxi
         </Button>
@@ -180,7 +180,7 @@ const LandingPage = () => {
           </p>
           <Button 
             className="cta-button"
-            onClick={() => window.open('https://instagram.com', '_blank')}
+            onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
           >
             Podívej se, jak to funguje
           </Button>

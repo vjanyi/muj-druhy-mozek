@@ -123,8 +123,12 @@ Create a clean, minimal one-page website in Czech language for a personal projec
 ## Next Tasks
 1. ✅ Test desktop view
 2. ✅ Test mobile responsiveness
-3. Update Instagram link when ready
+3. ✅ Update Instagram link to actual profile
 4. Consider adding newsletter/email signup if user wants to collect emails directly on the page
+
+## Instagram Profile
+- Profile URL: https://www.instagram.com/muj_druhy_mozek/
+- Both CTA buttons now link to the actual Instagram profile
 
 ## Technical Notes
 - No backend required - purely static landing page
