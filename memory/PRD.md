@@ -65,7 +65,35 @@ Create a clean, minimal one-page website in Czech language for a personal projec
 ## What's Been Implemented
 **Date**: December 2024
 
-### Latest Update: Final Polish (December 2024) ✅
+### Latest Update: Content Clarity & Anti-Repetition (December 2024) ✅
+**Goal**: Eliminate all repetition, each section brings a NEW angle
+
+**Final Content Improvements**:
+1. **Hero Headline (Final)** - "Pamatuješ si, že sis to někam napsala. Ale kde?" - More specific ("napsala" vs "měla")
+2. **Hero Subline (NEW)** - "Ukazuju, jak si v tom udělat systém." - Provides context without repeating later sections
+3. **Problem Section Cleaned** - Removed duplicate "Pamatuješ si... Ale kde?" (was repeating hero)
+4. **Bridge Section (NEW)** - "A není to tím, že bys byla neorganizovaná." - Reassurance, unique angle
+5. **Benefits Enhancement** - Added: "A hlavně: přestaneš mít pocit, že něco ztrácíš." - Emotional outcome, unique
+6. **Final CTA Refined** - Changed to "Sleduj, jak to vypadá v praxi" - Avoids repetition with hero subline
+
+**Content Flow (No Repetition)**:
+- Each section adds NEW value:
+  1. Hero → Core problem identification
+  2. Problem → Where chaos happens + emotional cycle
+  3. Bridge → Reassurance (not about being disorganized)
+  4. Breakthrough → Real problem (lack of system)
+  5. Second brain → What the solution is
+  6. How I build → The practical approach
+  7. Benefits → Outcomes (functional + emotional)
+  8. Final CTA → See it in practice
+
+**Typography & Design**:
+- Hero subline: Smaller, subtle (clamp(0.95rem, 2.5vw, 1.15rem))
+- Bridge text: Italic, gray, centered
+- Benefit emphasis: Font-weight 600 for key emotional message
+- All improvements maintain minimal aesthetic
+
+### Previous Update: Final Polish (December 2024) ✅
 **Goal**: Maximum impact with minimal design changes
 
 **Final Improvements**:

@@ -63,8 +63,17 @@ section {
 .hero-subtitle {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   font-weight: 400;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   color: #444444;
+  max-width: 30ch;
+  line-height: 1.5;
+}
+
+.hero-subline {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  font-weight: 400;
+  margin-bottom: 48px;
+  color: #666666;
   max-width: 30ch;
   line-height: 1.5;
 }
@@ -123,6 +132,22 @@ section {
   font-weight: 500;
   line-height: 1.8;
   letter-spacing: 0.02em;
+}
+
+/* Bridge Section */
+.bridge-section {
+  padding: 60px 24px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.bridge-text {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  color: #555555;
+  font-weight: 400;
+  font-style: italic;
+  max-width: 35ch;
+  margin: 0 auto;
 }
 
 /* Insight Section */
@@ -225,6 +250,15 @@ section {
   color: #000000;
   line-height: 1.6;
   font-weight: 500;
+}
+
+.benefit-text-emphasis {
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+  margin-top: 40px;
+  margin-bottom: 32px;
+  color: #000000;
+  line-height: 1.6;
+  font-weight: 600;
 }
 
 .benefit-subtext {

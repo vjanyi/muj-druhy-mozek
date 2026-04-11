@@ -41,10 +41,13 @@ const LandingPage = () => {
         <div className="graphic-dot"></div>
         <h1 className="hero-title">
           Pamatuješ si,<br />
-          že jsi to někde měla.
+          že sis to někam napsala.
         </h1>
         <p className="hero-subtitle">
           Ale kde?
+        </p>
+        <p className="hero-subline">
+          Ukazuju, jak si v tom udělat systém.
         </p>
         <Button 
           className="cta-button"
@@ -62,14 +65,19 @@ const LandingPage = () => {
           <p className="problem-text">
             V telefonu, v notebooku, na papírcích…
           </p>
-          <p className="problem-text">
-            Pamatuješ si, že jsi to někde měla.<br />
-            Ale kde?
-          </p>
           <p className="problem-text-repetition">
             A tak to začneš psát znovu.<br />
             A znovu.<br />
             A znovu.
+          </p>
+        </div>
+      </section>
+
+      {/* Bridge Section */}
+      <section className="bridge-section fade-in" ref={addToRefs}>
+        <div className="section-content">
+          <p className="bridge-text">
+            A není to tím, že bys byla neorganizovaná.
           </p>
         </div>
       </section>
@@ -138,6 +146,10 @@ const LandingPage = () => {
             Možnost se k věcem vracet —<br />
             a opravdu je používat.
           </p>
+          <p className="benefit-text-emphasis">
+            A hlavně: přestaneš mít pocit,<br />
+            že něco ztrácíš.
+          </p>
           <p className="benefit-subtext">
             Ne jen sbírat informace.<br />
             Ale pracovat s nimi.
@@ -151,7 +163,7 @@ const LandingPage = () => {
         <div className="section-content">
           <div className="graphic-dot"></div>
           <h2 className="cta-title">
-            Sdílím, jak si ten systém stavím.
+            Sleduj, jak to vypadá v praxi.
           </h2>
           <p className="cta-subtitle">
             Bez dokonalosti.<br />
