@@ -65,7 +65,31 @@ Create a clean, minimal one-page website in Czech language for a personal projec
 ## What's Been Implemented
 **Date**: December 2024
 
-### Latest Update: Content Clarity & Anti-Repetition (December 2024) ✅
+### Latest Update: Arrow Graphics Added (December 2024) ✅
+**Goal**: Add minimal visual flow indicators to guide the eye
+
+**Arrow Elements (4 total)**:
+1. **Down arrow near hero CTA** - Subtle pointer directing attention to action button
+2. **Flow indicator arrow (bridge section)** - Vertical arrow with gentle pulse animation suggesting progression
+3. **Small horizontal pointer (benefits)** - Points to key emotional benefit
+4. **Down arrow near final CTA** - Guides to final action
+
+**Arrow Specifications**:
+- Very thin lines (1-2px)
+- Accent color #f4a261
+- Opacity 0.4-0.8 (subtle, not dominant)
+- CSS-based triangular arrowheads
+- One with gentle pulse animation (3s ease-in-out)
+- Total: 4 arrows (within 3-5 limit)
+
+**Design Principles**:
+- Support flow and direction, don't distract
+- Consistent with dot graphic style
+- No heavy animations
+- Clean spacing, don't disrupt layout
+- Represent thinking process and progression
+
+### Previous Update: Content Clarity & Anti-Repetition (December 2024) ✅
 **Goal**: Eliminate all repetition, each section brings a NEW angle
 
 **Final Content Improvements**:

@@ -49,12 +49,15 @@ const LandingPage = () => {
         <p className="hero-subline">
           Ukazuju, jak si v tom udělat systém.
         </p>
-        <Button 
-          className="cta-button"
-          onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
-        >
-          Podívej se, jak si to stavím
-        </Button>
+        <div className="cta-with-arrow">
+          <div className="arrow-indicator-down"></div>
+          <Button 
+            className="cta-button"
+            onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
+          >
+            Podívej se, jak si to stavím
+          </Button>
+        </div>
         <div className="graphic-arrow-down"></div>
       </section>
 
@@ -79,6 +82,7 @@ const LandingPage = () => {
           <p className="bridge-text">
             A není to tím, že bys byla neorganizovaná.
           </p>
+          <div className="arrow-flow-indicator"></div>
         </div>
       </section>
 
@@ -146,10 +150,13 @@ const LandingPage = () => {
             Možnost se k věcem vracet —<br />
             a opravdu je používat.
           </p>
-          <p className="benefit-text-emphasis">
-            A hlavně: přestaneš mít pocit,<br />
-            že něco ztrácíš.
-          </p>
+          <div className="benefit-with-arrow">
+            <div className="arrow-pointer-small"></div>
+            <p className="benefit-text-emphasis">
+              A hlavně: přestaneš mít pocit,<br />
+              že něco ztrácíš.
+            </p>
+          </div>
           <p className="benefit-subtext">
             Ne jen sbírat informace.<br />
             Ale pracovat s nimi.
@@ -169,12 +176,15 @@ const LandingPage = () => {
             Bez dokonalosti.<br />
             Za pochodu.
           </p>
-          <Button 
-            className="cta-button"
-            onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
-          >
-            Podívej se, jak si to stavím
-          </Button>
+          <div className="cta-with-arrow">
+            <div className="arrow-indicator-down"></div>
+            <Button 
+              className="cta-button"
+              onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
+            >
+              Podívej se, jak si to stavím
+            </Button>
+          </div>
         </div>
       </section>
 
