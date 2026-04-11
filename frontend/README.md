@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Můj druhý mozek
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Minimalistická landing page pro osobní projekt "Můj druhý mozek" - systém pro organizaci poznámek a myšlenek.
 
-## Available Scripts
+## 🎯 O projektu
 
-In the project directory, you can run:
+Čistá, minimalistická stránka v češtině představující koncept "druhého mozku" - osobního systému pro ukládání a organizaci informací.
 
-### `npm start`
+## ✨ Vlastnosti
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Minimalistický design**: Hodně bílého prostoru, černý text + akcent barva (#f4a261)
+- **Žádné fotky**: Pouze abstraktní grafické prvky (tečky a šipky)
+- **Responzivní**: Mobile-first přístup
+- **Animace**: Jemné fade-in efekty při scrollování
+- **CTA tlačítka**: Vedou na Instagram profil
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Technologie
 
-### `npm test`
+- React 19
+- Tailwind CSS
+- Shadcn/UI komponenty
+- React Router
+- CSS animace
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Instalace (lokální vývoj)
 
-### `npm run build`
+```bash
+cd frontend
+yarn install
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Otevři [http://localhost:3000](http://localhost:3000)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏗️ Build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn build
+```
 
-### `npm run eject`
+Build vytvoří optimalizovanou produkční verzi v `build/` složce.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Nasazení
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Projekt je připraven pro nasazení na Vercel. Detailní instrukce najdeš v [DEPLOYMENT_GUIDE.md](../DEPLOYMENT_GUIDE.md)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Rychlé nasazení:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Nahraj na GitHub
+2. Připoj na [vercel.com](https://vercel.com)
+3. Import projektu
+4. Deploy ✅
 
-## Learn More
+## 📱 Sekce stránky
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Hero** - Hlavní nadpis a CTA
+2. **Problém** - Identifikace problému s poznámkami
+3. **Průlom** - Klíčový insight (chybí systém)
+4. **Co je druhý mozek** - Vysvětlení konceptu
+5. **Jak to stavím** - Praktický přístup
+6. **Benefity** - Výsledky a přínosy
+7. **Závěrečná CTA** - Pozvánka sledovat cestu
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎨 Design principy
 
-### Code Splitting
+- 80% typografie, 20% grafické prvky
+- Maximální čitelnost
+- Klidný, osobní tón (ne korporátní)
+- Bez opakování obsahu
+- Každá sekce přináší novou hodnotu
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📊 Performance
 
-### Analyzing the Bundle Size
+- Optimalizováno pro rychlé načítání
+- Minimal JavaScript bundle
+- Lazy loading komponent
+- CSS optimalizace
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔗 Odkazy
 
-### Making a Progressive Web App
+- Instagram: [@muj_druhy_mozek](https://www.instagram.com/muj_druhy_mozek/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📝 Licence
 
-### Advanced Configuration
+Tento projekt je privátní.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Vytvořeno s ❤️ pro sdílení cesty budování osobního systému poznámek.
