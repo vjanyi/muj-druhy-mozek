@@ -40,11 +40,11 @@ const LandingPage = () => {
       <section className="hero-section fade-in" ref={addToRefs}>
         <div className="graphic-dot"></div>
         <h1 className="hero-title">
-          Máš poznámky všude.
+          Pamatuješ si,<br />
+          že jsi to někde měla.
         </h1>
         <p className="hero-subtitle">
-          Ale když něco potřebuješ,<br />
-          stejně to nenajdeš.
+          Ale kde?
         </p>
         <Button 
           className="cta-button"
