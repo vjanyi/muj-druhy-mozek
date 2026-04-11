@@ -1,12 +1,12 @@
 # PRD: Můj druhý mozek - Landing Page
 
 ## Original Problem Statement
-Create a clean, minimal one-page website (landing page) for a personal project called "Můj druhý mozek" (My Second Brain). The page should be minimalist, modern, with lots of white space, black text + 1 accent color, clean typography, and a calm, thoughtful, not corporate feel.
+Create a clean, minimal one-page website in Czech language for a personal project called "Můj druhý mozek" (My Second Brain). The website should introduce the idea of building a personal system for notes ("second brain") and guide users to follow the journey on Instagram.
 
 ## User Persona
-- **Primary User**: Czech-speaking individuals interested in personal knowledge management
-- **Goal**: Learn about the "second brain" concept and follow the creator's journey
-- **Pain Points**: Chaotic notes, scattered information, difficulty remembering things
+- **Primary User**: Czech-speaking individuals struggling with scattered notes and information chaos
+- **Goal**: Learn about building a personal knowledge system and follow the creator's practical journey
+- **Pain Points**: Notes everywhere, can't find things when needed, chaotic information management
 
 ## Architecture
 - **Frontend**: React + shadcn/ui components
@@ -16,53 +16,57 @@ Create a clean, minimal one-page website (landing page) for a personal project c
 
 ## Core Requirements (Static)
 1. Czech language throughout
-2. Accent color: #f4a261 (warm peachy-orange)
-3. Minimal abstract graphics (dots + arrows) - NO photos
+2. Accent color: #f4a261 (soft orange)
+3. Minimal abstract graphics (dots + arrows) - NO stock photos, NO people images
 4. 80% typography / 20% minimal graphics
 5. Lots of white space
 6. Mobile-first responsive design
 7. Smooth scrolling + subtle fade-in animations
-8. CTA button links to external Instagram
+8. CTA buttons link to Instagram (placeholder for now)
+9. Feeling: calm, thoughtful, personal, trustworthy (not corporate, not startup-like)
 
 ## Sections Implemented
 1. **Hero Section**
-   - Headline: "Nemusíš si všechno pamatovat"
-   - Subheadline: "Ukazuju, jak si buduju svůj druhý mozek v reálném životě"
-   - CTA button: "Sleduj moji cestu"
-   - Minimal graphics: dot + arrow
+   - Headline: "Máš poznámky všude… ale když něco potřebuješ, nenajdeš to."
+   - Subheadline: "Ukazuju, jak si buduju systém, ve kterém se dá vracet."
+   - CTA button: "Sleduj, jak to stavím v praxi"
 
 2. **Problem Section**
    - Emotional problem description
-   - Chaos in notes and head
+   - Highlight: "Chaos v hlavě. Chaos v poznámkách."
 
-3. **Insight Section**
-   - Key message: "Problém není v paměti"
-   - Core insight: "Problém je v tom, že nemáš systém"
+3. **Breakthrough Section**
+   - Key insight: "Problém není v paměti. Problém je, že nemáš systém."
+   - Supporting text: "Tvůj mozek není úložiště. Je nástroj na přemýšlení."
 
-4. **Solution Section**
-   - "Druhý mozek" concept explanation
+4. **What Is Second Brain**
+   - "Druhý mozek není aplikace."
+   - System explanation
    - Three dots cluster graphic
 
-5. **How It Works**
-   - 3-step process with numbered circles
-   - Responsive layout (stacks on mobile, horizontal on desktop)
+5. **How I Build It**
+   - "Tenhle systém si stavím postupně."
+   - Practical approach explanation
+   - Emphasis on real-life functionality over perfection
 
-6. **About Me**
-   - Personal story from marketing director
-   - Authentic, calm tone
+6. **Benefits Section**
+   - "Méně chaosu v hlavě."
+   - "Věci na jednom místě."
+   - "Možnost se k nim vracet — a opravdu je používat."
+   - "Ne jen sbírat informace. Ale pracovat s nimi."
 
 7. **Final CTA**
-   - "Pojď se mnou"
-   - Repeat CTA button
+   - "Sdílím, jak si ten systém buduju v praxi. Bez dokonalosti. Za pochodu."
+   - CTA button: "Podívej se, jak to funguje"
 
 8. **Footer**
-   - Simple copyright text
+   - "Můj druhý mozek • 2026"
 
 ## What's Been Implemented
 **Date**: December 2024
 
 ### Frontend ✅
-- `/app/frontend/src/pages/LandingPage.jsx` - Main landing page component
+- `/app/frontend/src/pages/LandingPage.jsx` - Main landing page component with updated content
 - `/app/frontend/src/pages/LandingPage.css` - Custom minimal CSS styling
 - `/app/frontend/src/App.js` - Updated routing to use LandingPage
 - `/app/frontend/src/App.css` - Simplified global styles
@@ -73,15 +77,25 @@ Create a clean, minimal one-page website (landing page) for a personal project c
 - Fade-in animations using Intersection Observer
 - Mobile-first responsive design
 - Clean typography with clamp() for fluid sizing
-- Accent color #f4a261 used sparingly
+- Accent color #f4a261 used sparingly (buttons, accents)
 - High contrast black text on white background
 - Alternating section backgrounds (#ffffff and #fafafa)
+- Calm, clean, thoughtful aesthetic
+
+### Content Updates ✅
+- New hero headline focusing on the core problem
+- Updated problem section with more emotional connection
+- Removed 3-step process cards, replaced with flowing text
+- Removed personal story section (integrated into overall narrative)
+- New benefits section highlighting practical outcomes
+- Updated CTAs with more action-oriented language
+- Footer updated to 2026
 
 ### Animations ✅
 - Fade-in on scroll for all sections
 - Button hover effects (lift + shadow)
-- Card hover effects in steps section
 - Smooth transitions throughout
+- Very subtle, not distracting
 
 ### Responsive Breakpoints ✅
 - Mobile: < 768px (stacked layout)
@@ -90,26 +104,27 @@ Create a clean, minimal one-page website (landing page) for a personal project c
 
 ## Prioritized Backlog
 ### P0 Features
-- ✅ All core sections implemented
+- ✅ All 7 core sections implemented
 - ✅ Mobile responsive design
 - ✅ Minimal graphics (dots + arrows)
 - ✅ Smooth animations
+- ✅ Updated content and CTAs
 
 ### P1 Features (Optional Enhancements)
 - [ ] Update Instagram link to actual profile URL
-- [ ] Add more subtle micro-interactions
-- [ ] Consider adding a simple contact form (if needed)
+- [ ] Add subtle parallax effects (very minimal)
+- [ ] Consider adding a simple email capture form
 
 ### P2 Features (Future Considerations)
 - [ ] Blog integration for journey updates
-- [ ] Newsletter signup integration
+- [ ] Newsletter signup with backend
 - [ ] Analytics tracking
 
 ## Next Tasks
 1. ✅ Test desktop view
 2. ✅ Test mobile responsiveness
 3. Update Instagram link when ready
-4. Consider adding newsletter signup if user wants to collect emails
+4. Consider adding newsletter/email signup if user wants to collect emails directly on the page
 
 ## Technical Notes
 - No backend required - purely static landing page
@@ -117,3 +132,4 @@ Create a clean, minimal one-page website (landing page) for a personal project c
 - Uses React hooks (useEffect, useRef) for animations
 - Intersection Observer API for scroll-triggered animations
 - CSS custom properties for easy color theming
+- Line breaks in JSX using `<br />` for precise typography control

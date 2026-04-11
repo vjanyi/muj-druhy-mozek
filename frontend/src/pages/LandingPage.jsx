@@ -39,15 +39,20 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="hero-section fade-in" ref={addToRefs}>
         <div className="graphic-dot"></div>
-        <h1 className="hero-title">Nemusíš si všechno pamatovat</h1>
+        <h1 className="hero-title">
+          Máš poznámky všude…<br />
+          ale když něco potřebuješ,<br />
+          nenajdeš to.
+        </h1>
         <p className="hero-subtitle">
-          Ukazuju, jak si buduju svůj druhý mozek v reálném životě
+          Ukazuju, jak si buduju systém,<br />
+          ve kterém se dá vracet.
         </p>
         <Button 
           className="cta-button"
           onClick={() => window.open('https://instagram.com', '_blank')}
         >
-          Sleduj moji cestu
+          Sleduj, jak to stavím v praxi
         </Button>
         <div className="graphic-arrow-down"></div>
       </section>
@@ -57,16 +62,19 @@ const LandingPage = () => {
         <div className="section-content">
           <div className="graphic-dot-small"></div>
           <p className="problem-text">
-            Znáš ten pocit, když máš poznámky všude?
+            Znáš ten pocit, kdy máš poznámky všude?
           </p>
           <p className="problem-text">
-            V telefonu, v notebooku, na papírkách…
+            V telefonu, v notebooku, na papírcích…<br />
+            něco si zapíšeš — ale už se k tomu nevrátíš.
           </p>
           <p className="problem-text">
-            A když něco potřebuješ, tak to stejně nenajdeš?
+            Pamatuješ si, že jsi to někde měla.<br />
+            Ale kde?
           </p>
           <p className="problem-text-emphasis">
-            Chaos v hlavě. Chaos v poznámkách.
+            Chaos v hlavě.<br />
+            Chaos v poznámkách.
           </p>
         </div>
       </section>
@@ -76,32 +84,36 @@ const LandingPage = () => {
         <div className="separator-line"></div>
       </div>
 
-      {/* Insight Section */}
+      {/* Breakthrough Section */}
       <section className="insight-section fade-in" ref={addToRefs}>
         <div className="section-content">
-          <h2 className="insight-title">Problém není v paměti</h2>
+          <h2 className="insight-title">
+            Problém není v paměti.
+          </h2>
           <p className="insight-text">
-            Problém je v tom, že nemáš systém.
+            Problém je, že nemáš systém.
           </p>
           <p className="insight-description">
-            Tvůj mozek není úložiště. Je nástroj na myšlení.
+            Tvůj mozek není úložiště.<br />
+            Je nástroj na přemýšlení.
           </p>
           <div className="graphic-arrow-right"></div>
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* What Is Second Brain Section */}
       <section className="solution-section fade-in" ref={addToRefs}>
         <div className="section-content">
-          <h2 className="section-title">Druhý mozek</h2>
+          <h2 className="section-title">Druhý mozek není aplikace.</h2>
           <p className="solution-text">
-            Druhý mozek není aplikace. Je to systém.
+            Je to systém,<br />
+            do kterého si ukládáš věci ze života —<br />
+            z práce, ze vztahů, ze zdraví,<br />
+            z každodenních situací.
           </p>
-          <p className="solution-text">
-            Systém, do kterého ukládáš věci ze života — z práce, ze vztahů, ze zdraví, z domácnosti.
-          </p>
-          <p className="solution-text">
-            Ne proto, abys si všechno pamatovala, ale abys věděla, kam se vrátit.
+          <p className="solution-subtext">
+            Ne proto, abys si všechno pamatovala,<br />
+            ale abys věděla, kam se vrátit.
           </p>
           <div className="graphic-dots-cluster">
             <div className="cluster-dot"></div>
@@ -111,69 +123,47 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* How I Build It Section */}
       <section className="how-section fade-in" ref={addToRefs}>
         <div className="section-content">
-          <h2 className="section-title">Jak začít?</h2>
-          <div className="steps-container">
-            <div className="step">
-              <div className="step-number">1</div>
-              <h3 className="step-title">Začni jednou věcí</h3>
-              <p className="step-description">
-                Neřeš všechno najednou. Vyber si jednu oblast života a začni tam.
-              </p>
-            </div>
-            
-            <div className="step-arrow">→</div>
-
-            <div className="step">
-              <div className="step-number">2</div>
-              <h3 className="step-title">Vytvoř jednoduchý systém</h3>
-              <p className="step-description">
-                Žádná složitost. Prostě místo, kam věci ukládáš a kde je najdeš.
-              </p>
-            </div>
-
-            <div className="step-arrow">→</div>
-
-            <div className="step">
-              <div className="step-number">3</div>
-              <h3 className="step-title">Postupně ho rozšiřuj</h3>
-              <p className="step-description">
-                Systém roste s tebou. Přidávej, co funguje. Měň, co nefunguje.
-              </p>
-            </div>
-          </div>
+          <h2 className="section-title">Tenhle systém si stavím postupně.</h2>
+          <p className="how-text">
+            Zkouším, co funguje.<br />
+            Co nefunguje, pouštím.
+          </p>
+          <p className="how-text">
+            Začínám vždy jednou věcí,<br />
+            která mě zrovna nejvíc tíží.
+          </p>
+          <p className="how-subtext">
+            Nejde o dokonalý nástroj.
+          </p>
+          <p className="how-subtext-emphasis">
+            Jde o to,<br />
+            aby ten systém fungoval v reálném životě.
+          </p>
+          <div className="graphic-arrow-right"></div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about-section fade-in" ref={addToRefs}>
+      {/* Benefits Section */}
+      <section className="benefits-section fade-in" ref={addToRefs}>
         <div className="section-content">
-          <h2 className="section-title">O mně</h2>
-          <div className="about-text">
-            <p>
-              Jsem marketingová ředitelka a roky bojuju s pamětí.
-            </p>
-            <p>
-              Ne proto, že bych nevnímala, ale protože si věci zkrátka nepamatuju tak, jak bych chtěla.
-            </p>
-            <p>
-              Začala jsem si proto budovat vlastní systém poznámek — nejdřív v práci, postupně i v osobním životě.
-            </p>
-            <p>
-              Dnes si tak ukládám věci z práce, vztahů, zdraví i běžného života.
-            </p>
-            <p>
-              Ne proto, abych si všechno pamatovala, ale abych věděla, kam se vrátit.
-            </p>
-            <p>
-              Tenhle systém si dál buduju a zkouším v praxi.
-            </p>
-            <p className="about-emphasis">
-              A ukazuju, jak to dělám.
-            </p>
-          </div>
+          <p className="benefit-text">
+            Méně chaosu v hlavě.
+          </p>
+          <p className="benefit-text">
+            Věci na jednom místě.
+          </p>
+          <p className="benefit-text">
+            Možnost se k nim vracet —<br />
+            a opravdu je používat.
+          </p>
+          <p className="benefit-subtext">
+            Ne jen sbírat informace.<br />
+            Ale pracovat s nimi.
+          </p>
+          <div className="graphic-dot-small"></div>
         </div>
       </section>
 
@@ -181,22 +171,25 @@ const LandingPage = () => {
       <section className="final-cta-section fade-in" ref={addToRefs}>
         <div className="section-content">
           <div className="graphic-dot"></div>
-          <h2 className="cta-title">Pojď se mnou</h2>
+          <h2 className="cta-title">
+            Sdílím, jak si ten systém buduju v praxi.
+          </h2>
           <p className="cta-subtitle">
-            Sleduj, jak si buduju druhý mozek v reálném životě
+            Bez dokonalosti.<br />
+            Za pochodu.
           </p>
           <Button 
             className="cta-button"
             onClick={() => window.open('https://instagram.com', '_blank')}
           >
-            Sleduj moji cestu
+            Podívej se, jak to funguje
           </Button>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <p className="footer-text">Můj druhý mozek • 2024</p>
+        <p className="footer-text">Můj druhý mozek • 2026</p>
       </footer>
     </div>
   );

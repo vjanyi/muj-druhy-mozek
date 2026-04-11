@@ -152,10 +152,20 @@ section {
 }
 
 .solution-text {
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin-bottom: 24px;
   color: #333333;
   line-height: 1.7;
+  font-weight: 400;
+}
+
+.solution-subtext {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  margin-top: 32px;
+  margin-bottom: 24px;
+  color: #555555;
+  line-height: 1.7;
+  font-style: italic;
 }
 
 /* How Section */
@@ -163,60 +173,51 @@ section {
   padding: 100px 24px;
 }
 
-.steps-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-top: 60px;
+.how-text {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 24px;
+  color: #333333;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-.step {
-  text-align: center;
-  padding: 32px 24px;
-  background: #fafafa;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.step:hover {
-  background: #f5f5f5;
-  transform: translateY(-4px);
-}
-
-.step-number {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #f4a261;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 auto 20px;
-}
-
-.step-title {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
-  font-weight: 600;
+.how-subtext {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  margin-top: 40px;
   margin-bottom: 12px;
-  color: #000000;
-}
-
-.step-description {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #555555;
-  line-height: 1.6;
-  max-width: 35ch;
-  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.step-arrow {
-  font-size: 2rem;
-  color: #f4a261;
-  text-align: center;
-  transform: rotate(90deg);
+.how-subtext-emphasis {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 48px;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 100px 24px;
+  background: #ffffff;
+}
+
+.benefit-text {
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+  margin-bottom: 28px;
+  color: #000000;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.benefit-subtext {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  margin-top: 48px;
+  margin-bottom: 32px;
+  color: #555555;
+  line-height: 1.7;
+  font-style: italic;
 }
 
 /* About Section */
@@ -350,22 +351,6 @@ section {
   .hero-section {
     padding: 140px 40px 100px;
   }
-
-  .steps-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .step {
-    flex: 1;
-    max-width: 280px;
-  }
-
-  .step-arrow {
-    transform: rotate(0deg);
-    flex-shrink: 0;
-  }
 }
 
 /* Desktop */
@@ -380,7 +365,7 @@ section {
 
   .problem-section,
   .solution-section,
-  .about-section {
+  .benefits-section {
     padding: 120px 60px;
   }
 }
