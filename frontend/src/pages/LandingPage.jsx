@@ -106,6 +106,10 @@ const LandingPage = () => {
           <p className="hero-subtitle">
             Ale skoro se k nim nevracíš.
           </p>
+          
+          {/* Visual separator - result indicator */}
+          <div className="result-divider"></div>
+          
           <p className="hero-subline">
             Ukazuju, jak si vytvořit systém,<br />
             ve kterém se k nim vrátíš.
@@ -123,8 +127,6 @@ const LandingPage = () => {
               />
             </svg>
           </div>
-          
-          <div className="graphic-arrow-down"></div>
         </section>
 
         {/* Orange Statement Section */}
@@ -135,6 +137,19 @@ const LandingPage = () => {
               Hlava není na ukládání.<br />
               Je na přemýšlení.
             </p>
+            
+            {/* Scroll indicator */}
+            <div className="subline-arrow">
+              <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                  stroke="#f4a261" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </section>
 
@@ -166,6 +181,19 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
+            
+            {/* Scroll indicator */}
+            <div className="subline-arrow">
+              <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                  stroke="#f4a261" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </section>
 
@@ -187,6 +215,19 @@ const LandingPage = () => {
               <p className="story-emphasis">
                 Jen mi chyběl systém.
               </p>
+            </div>
+            
+            {/* Scroll indicator */}
+            <div className="subline-arrow">
+              <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                  stroke="#f4a261" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
           </div>
         </section>
@@ -217,6 +258,19 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
+            
+            {/* Scroll indicator */}
+            <div className="subline-arrow">
+              <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                  stroke="#f4a261" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </section>
 
@@ -245,6 +299,19 @@ const LandingPage = () => {
               <div className="cluster-dot"></div>
               <div className="cluster-dot"></div>
               <div className="cluster-dot"></div>
+            </div>
+            
+            {/* Scroll indicator */}
+            <div className="subline-arrow">
+              <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                  stroke="#f4a261" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
           </div>
         </section>
