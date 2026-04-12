@@ -95,12 +95,13 @@
 /* Section Styles */
 section {
   padding: 100px 24px;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .section-content {
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .section-heading {
