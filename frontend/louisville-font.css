@@ -1,0 +1,25 @@
+/* Louisville Font - @font-face declarations */
+/* Add this to LandingPage.css AFTER uploading font files to public/fonts/ */
+
+@font-face {
+  font-family: 'Louisville';
+  src: url('/fonts/Louisville.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Louisville';
+  src: url('/fonts/LouisvilleBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* INSTRUCTIONS:
+ * 1. Upload Louisville.woff and LouisvilleBold.woff to public/fonts/
+ * 2. Copy these @font-face rules
+ * 3. Paste them at the TOP of LandingPage.css (after @import for Inter)
+ * 4. Commit and deploy
+ */
