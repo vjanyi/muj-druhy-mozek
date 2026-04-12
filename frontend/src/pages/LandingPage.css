@@ -192,7 +192,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 120px 24px;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   transition: background-color 0.3s ease;
 }
 
@@ -228,7 +228,7 @@ section {
 
 /* Problem Section */
 .problem-section {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   padding: 120px 24px;
   transition: background-color 0.3s ease;
 }
@@ -270,7 +270,7 @@ section {
 /* Story Section */
 .story-section {
   padding: 120px 24px;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   transition: background-color 0.3s ease;
 }
 
@@ -339,7 +339,7 @@ section {
 /* Benefit Section */
 .benefit-section {
   padding: 120px 24px;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   text-align: center;
   transition: background-color 0.3s ease;
 }
@@ -378,7 +378,7 @@ section {
 .final-cta-section {
   padding: 140px 24px;
   text-align: center;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   transition: background-color 0.3s ease;
 }
 
