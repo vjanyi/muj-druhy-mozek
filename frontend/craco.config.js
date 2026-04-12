@@ -38,6 +38,15 @@ let webpackConfig = {
     },
     configure: (webpackConfig) => {
 
+      // Add font loader rule
+      webpackConfig.module.rules.push({
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/fonts/[name][ext]'
+        }
+      });
+
       // Add ignored patterns to reduce watched directories
         webpackConfig.watchOptions = {
           ...webpackConfig.watchOptions,
