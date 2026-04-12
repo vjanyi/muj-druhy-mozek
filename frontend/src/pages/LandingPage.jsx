@@ -210,7 +210,7 @@ const LandingPage = () => {
         {/* Story Section */}
         <section className="story-section fade-in" ref={addToRefs}>
           <div className="section-content">
-            <h2 className="section-heading">Neučím software. Učím klid.</h2>
+            <h2 className="section-heading">Neučím software.<br />Učím klid.</h2>
             
             <div className="story-text">
               <p>
