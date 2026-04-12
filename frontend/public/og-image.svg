@@ -1,0 +1,41 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- Decorative brain circle (top right) -->
+  <circle cx="1000" cy="150" r="120" fill="#f4a261" opacity="0.15"/>
+  
+  <!-- Main brain icon (left) -->
+  <circle cx="250" cy="315" r="140" fill="#f4a261" opacity="0.9"/>
+  
+  <!-- Neural pattern on main circle -->
+  <g stroke="#000000" stroke-width="3" fill="none" opacity="0.3">
+    <path d="M 180 260 Q 210 280, 180 300"/>
+    <path d="M 160 300 Q 190 320, 160 340"/>
+    <path d="M 320 260 Q 290 280, 320 300"/>
+    <path d="M 340 300 Q 310 320, 340 340"/>
+    <circle cx="180" cy="260" r="5" fill="#000000"/>
+    <circle cx="180" cy="300" r="5" fill="#000000"/>
+    <circle cx="320" cy="260" r="5" fill="#000000"/>
+    <circle cx="320" cy="300" r="5" fill="#000000"/>
+    <circle cx="250" cy="315" r="6" fill="#000000"/>
+  </g>
+  
+  <!-- Main text -->
+  <text x="480" y="280" font-family="Louisville, Georgia, serif" font-size="72" font-weight="700" fill="#ffffff">
+    Můj druhý mozek
+  </text>
+  
+  <!-- Tagline -->
+  <text x="480" y="350" font-family="Inter, sans-serif" font-size="32" fill="#f4a261">
+    Píšeš si poznámky. Ale skoro se k nim nevracíš.
+  </text>
+  
+  <!-- Bottom line -->
+  <text x="480" y="420" font-family="Inter, sans-serif" font-size="28" fill="#cccccc">
+    Ukazuju, jak si vytvořit systém, ve kterém se k nim vrátíš.
+  </text>
+  
+  <!-- Accent line (bottom) -->
+  <rect x="480" y="460" width="400" height="4" fill="#f4a261" opacity="0.6"/>
+</svg>
