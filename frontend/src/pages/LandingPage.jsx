@@ -110,11 +110,18 @@ const LandingPage = () => {
             Ukazuju, jak si vytvořit systém,<br />
             ve kterém se k nim vrátíš.
           </p>
-          <p className="hero-highlight">
-            Hlava není na ukládání.<br />
-            Je na přemýšlení.
-          </p>
           <div className="graphic-arrow-down"></div>
+        </section>
+
+        {/* Orange Statement Section */}
+        <section className="statement-section fade-in" ref={addToRefs}>
+          <div className="statement-content">
+            <div className="statement-dot"></div>
+            <p className="statement-text">
+              Hlava není na ukládání.<br />
+              Je na přemýšlení.
+            </p>
+          </div>
         </section>
 
         {/* Problem Section */}
