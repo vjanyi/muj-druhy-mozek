@@ -472,7 +472,10 @@ section {
 /* Arrow Elements */
 .cta-with-arrow {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .arrow-indicator-down {
