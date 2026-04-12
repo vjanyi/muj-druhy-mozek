@@ -8,15 +8,76 @@
 :root {
   --font-heading: 'Louisville', 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Light Mode Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-tertiary: #555555;
+  --text-muted: #666666;
+  --text-light: #888888;
+  --accent: #f4a261;
+  --accent-hover: #e89451;
+  --border-color: #e0e0e0;
+  --card-bg: #fafafa;
+  --card-hover-bg: #f5f5f5;
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #d0d0d0;
+  --text-tertiary: #b0b0b0;
+  --text-muted: #909090;
+  --text-light: #707070;
+  --accent: #f4a261;
+  --accent-hover: #e89451;
+  --border-color: #404040;
+  --card-bg: #252525;
+  --card-hover-bg: #2f2f2f;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.3);
+  border-color: var(--accent);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
 }
 
 /* General Layout */
 .landing-page {
   min-height: 100vh;
-  background: #ffffff;
-  color: #000000;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Fade-in Animation */
@@ -47,9 +108,10 @@ section {
   font-size: clamp(2.2rem, 6vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 40px;
-  color: #000000;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 /* Hero Section */
@@ -69,10 +131,11 @@ section {
   font-size: clamp(3rem, 9vw, 5rem);
   font-weight: 800;
   margin-bottom: 32px;
-  color: #000000;
+  color: var(--text-primary);
   letter-spacing: -0.03em;
   line-height: 1.1;
   max-width: 20ch;
+  transition: color 0.3s ease;
 }
 
 .hero-subtitle {
@@ -80,9 +143,10 @@ section {
   font-size: clamp(1.3rem, 4vw, 1.8rem);
   font-weight: 400;
   margin-bottom: 32px;
-  color: #444444;
+  color: var(--text-muted);
   max-width: 30ch;
   line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
 .hero-subline {
@@ -90,9 +154,10 @@ section {
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   font-weight: 400;
   margin-bottom: 48px;
-  color: #666666;
+  color: var(--text-tertiary);
   max-width: 32ch;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .hero-highlight {
@@ -100,24 +165,37 @@ section {
   font-size: clamp(1.4rem, 4vw, 2rem);
   font-weight: 600;
   margin-top: 32px;
-  color: #f4a261;
+  color: var(--accent);
   max-width: 28ch;
   line-height: 1.5;
   font-style: italic;
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+/* Subtle Pulse Animation for Emphasis */
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
 }
 
 /* Problem Section */
 .problem-section {
-  background: #fafafa;
+  background: var(--bg-secondary);
   padding: 120px 24px;
+  transition: background-color 0.3s ease;
 }
 
 .problem-intro {
   font-size: clamp(1.3rem, 4vw, 1.7rem);
   margin-bottom: 24px;
-  color: #333333;
+  color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .problem-bullets {
@@ -136,16 +214,18 @@ section {
 .problem-bullet {
   font-family: var(--font-body);
   font-size: clamp(1.15rem, 3vw, 1.45rem);
-  color: #000000;
+  color: var(--text-primary);
   font-weight: 500;
   line-height: 1.6;
   font-style: italic;
+  transition: color 0.3s ease;
 }
 
 /* Story Section */
 .story-section {
   padding: 120px 24px;
-  background: #ffffff;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 .story-text {
@@ -157,15 +237,16 @@ section {
   font-family: var(--font-body);
   font-size: clamp(1.15rem, 3vw, 1.4rem);
   margin-bottom: 28px;
-  color: #333333;
+  color: var(--text-secondary);
   line-height: 1.7;
+  transition: color 0.3s ease;
 }
 
 .story-emphasis {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 4vw, 1.8rem);
   font-weight: 600;
-  color: #f4a261;
+  color: var(--accent);
   margin-top: 40px;
 }
 
@@ -178,14 +259,16 @@ section {
 
 .use-case-card {
   padding: 40px 32px;
-  background: #fafafa;
-  border-left: 4px solid #f4a261;
-  transition: all 0.3s ease;
+  background: var(--card-bg);
+  border-left: 4px solid var(--accent);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, background-color;
 }
 
 .use-case-card:hover {
-  background: #f5f5f5;
-  transform: translateX(4px);
+  background: var(--card-hover-bg);
+  transform: translateX(8px) translateY(-4px);
+  box-shadow: -8px 8px 24px rgba(244, 162, 97, 0.15);
 }
 
 .use-case-title {
@@ -193,21 +276,24 @@ section {
   font-size: clamp(1.5rem, 4vw, 1.8rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #000000;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .use-case-text {
   font-family: var(--font-body);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: #555555;
+  color: var(--text-tertiary);
   line-height: 1.7;
+  transition: color 0.3s ease;
 }
 
 /* Benefit Section */
 .benefit-section {
   padding: 120px 24px;
-  background: #fafafa;
+  background: var(--bg-secondary);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .benefit-heading {
@@ -215,24 +301,26 @@ section {
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 700;
   margin-bottom: 48px;
-  color: #000000;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.3;
+  transition: color 0.3s ease;
 }
 
 .benefit-text p {
   font-family: var(--font-body);
   font-size: clamp(1.2rem, 3.5vw, 1.6rem);
   margin-bottom: 24px;
-  color: #333333;
+  color: var(--text-secondary);
   line-height: 1.7;
+  transition: color 0.3s ease;
 }
 
 .benefit-emphasis {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 4vw, 1.9rem);
   font-weight: 600;
-  color: #f4a261;
+  color: var(--accent);
   margin-top: 40px;
   font-style: italic;
 }
@@ -241,7 +329,8 @@ section {
 .final-cta-section {
   padding: 140px 24px;
   text-align: center;
-  background: #ffffff;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 .cta-heading {
@@ -249,22 +338,24 @@ section {
   font-size: clamp(2.5rem, 7vw, 3.8rem);
   font-weight: 700;
   margin-bottom: 32px;
-  color: #000000;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .cta-text {
   font-family: var(--font-body);
   font-size: clamp(1.2rem, 3.5vw, 1.5rem);
-  color: #555555;
+  color: var(--text-tertiary);
   margin-bottom: 16px;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 /* CTA Button */
 .cta-button {
-  background: #f4a261;
+  background: var(--accent);
   color: #000000;
   border: none;
   border-radius: 10rem;
@@ -272,36 +363,51 @@ section {
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   box-shadow: 0 4px 12px rgba(244, 162, 97, 0.25);
   margin-top: 40px;
   font-family: var(--font-body);
+  animation: button-pulse 2.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Button Pulse Animation */
+@keyframes button-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(244, 162, 97, 0.25);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(244, 162, 97, 0.45);
+  }
 }
 
 .cta-button:hover {
-  background: #e89451;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(244, 162, 97, 0.35);
+  background: var(--accent-hover);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(244, 162, 97, 0.4);
+  animation: none;
 }
 
 .cta-button:active {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(0.98);
 }
 
 /* Footer */
 .footer {
   padding: 48px 24px;
   text-align: center;
-  background: #fafafa;
-  border-top: 1px solid #e0e0e0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
 .footer-text {
   font-size: 0.9rem;
-  color: #888888;
+  color: var(--text-light);
   font-family: var(--font-body);
+  transition: color 0.3s ease;
 }
 
 /* Minimal Graphics */
@@ -309,25 +415,27 @@ section {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #f4a261;
+  background: var(--accent);
   margin: 0 auto 40px;
   opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
 .graphic-dot-small {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #f4a261;
+  background: var(--accent);
   opacity: 0.6;
   flex-shrink: 0;
+  transition: opacity 0.3s ease;
 }
 
 .graphic-arrow-down {
   margin-top: 80px;
   width: 2px;
   height: 50px;
-  background: linear-gradient(to bottom, #f4a261, transparent);
+  background: linear-gradient(to bottom, var(--accent), transparent);
   margin-left: auto;
   margin-right: auto;
   opacity: 0.5;
@@ -344,8 +452,14 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #f4a261;
+  background: var(--accent);
   opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.cluster-dot:hover {
+  opacity: 0.9;
+  transform: scale(1.15);
 }
 
 /* Arrow Elements */
@@ -361,7 +475,7 @@ section {
   transform: translateX(-50%);
   width: 2px;
   height: 24px;
-  background: #f4a261;
+  background: var(--accent);
   opacity: 0.5;
 }
 
@@ -375,7 +489,7 @@ section {
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid #f4a261;
+  border-top: 6px solid var(--accent);
   opacity: 0.8;
 }
 
