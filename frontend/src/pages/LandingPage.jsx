@@ -9,6 +9,19 @@ const LandingPage = () => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
 
+    // SEO: Update page title and meta
+    document.title = "Druhý mozek: Jak si uspořádat poznámky a přestat zapomínat";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Zapomínáš nápady a máš poznámky všude? Ukazuju, jak si vytvořit systém, ve kterém se k nim vrátíš. Bez složitých nástrojů, v reálném životě.");
+    }
+
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", "druhý mozek, organizace poznámek, jak si dělat poznámky, systém poznámek, digitální poznámky, jak si pamatovat věci, produktivita");
+    }
+
     // Intersection Observer for fade-in animations
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,157 +49,157 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      {/* Hero Section */}
-      <section className="hero-section fade-in" ref={addToRefs}>
-        <div className="graphic-dot"></div>
-        <h1 className="hero-title">
-          Pamatuješ si,<br />
-          že sis to někam napsala.
-        </h1>
-        <p className="hero-subtitle">
-          Ale kde?
-        </p>
-        <p className="hero-subline">
-          Ukazuju, jak si v tom udělat systém.
-        </p>
-        <div className="cta-with-arrow">
-          <div className="arrow-indicator-down"></div>
-          <Button 
-            className="cta-button"
-            onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
-          >
-            Podívej se, jak si to stavím
-          </Button>
-        </div>
-        <div className="graphic-arrow-down"></div>
-      </section>
-
-      {/* Problem Section */}
-      <section className="problem-section fade-in" ref={addToRefs}>
-        <div className="section-content">
-          <div className="graphic-dot-small"></div>
-          <p className="problem-text">
-            V telefonu, v notebooku, na papírcích…
-          </p>
-          <p className="problem-text-repetition">
-            A tak to začneš psát znovu.<br />
-            A znovu.<br />
-            A znovu.
-          </p>
-        </div>
-      </section>
-
-      {/* Bridge Section */}
-      <section className="bridge-section fade-in" ref={addToRefs}>
-        <div className="section-content">
-          <p className="bridge-text">
-            A není to tím, že bys byla neorganizovaná.
-          </p>
-          <div className="arrow-flow-indicator"></div>
-        </div>
-      </section>
-
-      {/* Separator */}
-      <div className="section-separator fade-in" ref={addToRefs}>
-        <div className="separator-line"></div>
-      </div>
-
-      {/* Breakthrough Section */}
-      <section className="insight-section fade-in" ref={addToRefs}>
-        <div className="section-content">
-          <h2 className="insight-title insight-emphasis">
-            Problém není v paměti.
-          </h2>
-          <p className="insight-text insight-emphasis">
-            Problém je, že nemáš systém.
-          </p>
-          <div className="graphic-arrow-right"></div>
-        </div>
-      </section>
-
-      {/* What Is Second Brain Section */}
-      <section className="solution-section fade-in" ref={addToRefs}>
-        <div className="section-content">
-          <h2 className="section-title">Druhý mozek není aplikace.</h2>
-          <p className="solution-text">
-            Je to systém,<br />
-            do kterého si ukládáš věci ze života.
-          </p>
-          <p className="solution-subtext">
-            Ne proto, abys si všechno pamatovala,<br />
-            ale abys věděla, kam se vrátit.
-          </p>
-          <div className="graphic-dots-cluster">
-            <div className="cluster-dot"></div>
-            <div className="cluster-dot"></div>
-            <div className="cluster-dot"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* How I Build It Section */}
-      <section className="how-section fade-in" ref={addToRefs}>
-        <div className="section-content">
-          <h2 className="section-title">Tenhle systém si stavím postupně.</h2>
-          <p className="how-text">
-            Zkouším, co funguje.<br />
-            Co nefunguje, pouštím.
-          </p>
-          <p className="how-subtext-emphasis">
-            Nejde o dokonalost.<br />
-            Jde o to, aby to fungovalo v reálném životě.
-          </p>
-          <div className="graphic-arrow-right"></div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="benefits-section fade-in" ref={addToRefs}>
-        <div className="section-content">
-          <p className="benefit-text">
-            Méně chaosu v hlavě.
-          </p>
-          <p className="benefit-text">
-            Možnost se k věcem vracet —<br />
-            a opravdu je používat.
-          </p>
-          <div className="benefit-with-arrow">
-            <div className="arrow-pointer-small"></div>
-            <p className="benefit-text-emphasis">
-              A hlavně: přestaneš mít pocit,<br />
-              že něco ztrácíš.
-            </p>
-          </div>
-          <p className="benefit-subtext">
-            Ne jen sbírat informace.<br />
-            Ale pracovat s nimi.
-          </p>
-          <div className="graphic-dot-small"></div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="final-cta-section fade-in" ref={addToRefs}>
-        <div className="section-content">
+      <main>
+        {/* Hero Section */}
+        <section className="hero-section fade-in" ref={addToRefs}>
           <div className="graphic-dot"></div>
-          <h2 className="cta-title">
-            Sleduj, jak to vypadá v praxi.
-          </h2>
-          <p className="cta-subtitle">
-            Bez dokonalosti.<br />
-            Za pochodu.
+          <h1 className="hero-title">
+            Píšeš si poznámky.
+          </h1>
+          <p className="hero-subtitle">
+            Ale skoro se k nim nevracíš.
           </p>
-          <div className="cta-with-arrow">
-            <div className="arrow-indicator-down"></div>
-            <Button 
-              className="cta-button"
-              onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
-            >
-              Podívej se, jak si to stavím
-            </Button>
+          <p className="hero-subline">
+            Ukazuju, jak si vytvořit systém,<br />
+            ve kterém se k nim vrátíš.
+          </p>
+          <p className="hero-highlight">
+            Hlava není na ukládání.<br />
+            Je na přemýšlení.
+          </p>
+          <div className="graphic-arrow-down"></div>
+        </section>
+
+        {/* Problem Section */}
+        <section className="problem-section fade-in" ref={addToRefs}>
+          <div className="section-content">
+            <h2 className="section-heading">Informační vyčerpání není tvoje vina.</h2>
+            <p className="problem-intro">
+              Máš toho v hlavě moc.
+            </p>
+            <p className="problem-intro">
+              A snažíš se to udržet pohromadě.
+            </p>
+            
+            <div className="problem-bullets">
+              <div className="problem-item">
+                <div className="graphic-dot-small"></div>
+                <p className="problem-bullet">„Někam jsem si to psala… ale nevím kam."</p>
+              </div>
+              <div className="problem-item">
+                <div className="graphic-dot-small"></div>
+                <p className="problem-bullet">Věci ti protékají mezi prsty.</p>
+              </div>
+              <div className="problem-item">
+                <div className="graphic-dot-small"></div>
+                <p className="problem-bullet">
+                  Zkoušíš další aplikaci.<br />
+                  A stejně to nepomáhá.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Story Section */}
+        <section className="story-section fade-in" ref={addToRefs}>
+          <div className="section-content">
+            <h2 className="section-heading">Neučím software. Učím klid.</h2>
+            
+            <div className="story-text">
+              <p>
+                Jsem marketingová ředitelka<br />
+                a dlouho jsem narážela na to,<br />
+                že se nemůžu spoléhat jen na svou paměť.
+              </p>
+              <p>
+                A pak mi došlo,<br />
+                že to není chyba.
+              </p>
+              <p className="story-emphasis">
+                Jen mi chyběl systém.
+              </p>
+            </div>
+
+            <div className="use-cases-grid">
+              <div className="use-case-card">
+                <h3 className="use-case-title">Zdraví</h3>
+                <p className="use-case-text">
+                  Výsledky, vyšetření a důležité informace na jednom místě.
+                </p>
+              </div>
+
+              <div className="use-case-card">
+                <h3 className="use-case-title">Vztahy</h3>
+                <p className="use-case-text">
+                  Pamatuju si, co mi lidé řekli minule.
+                </p>
+              </div>
+
+              <div className="use-case-card">
+                <h3 className="use-case-title">Vzdělání</h3>
+                <p className="use-case-text">
+                  Poznámky z knih, kurzů nebo přednášek,<br />
+                  ke kterým se můžu kdykoliv vrátit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefit Section */}
+        <section className="benefit-section fade-in" ref={addToRefs}>
+          <div className="section-content">
+            <h3 className="benefit-heading">Co kdybys nemusela mít všechno v hlavě?</h3>
+            
+            <div className="benefit-text">
+              <p>
+                Druhý mozek je místo,<br />
+                kam si věci odložíš.
+              </p>
+              <p>
+                A víš, že se k nim vrátíš.
+              </p>
+              <p>
+                Hlava se uvolní.
+              </p>
+              <p className="benefit-emphasis">
+                A ty můžeš přemýšlet,<br />
+                ne jen si pamatovat.
+              </p>
+            </div>
+            <div className="graphic-dots-cluster">
+              <div className="cluster-dot"></div>
+              <div className="cluster-dot"></div>
+              <div className="cluster-dot"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="final-cta-section fade-in" ref={addToRefs}>
+          <div className="section-content">
+            <div className="graphic-dot"></div>
+            <h2 className="cta-heading">Chceš vidět, jak to vypadá v praxi?</h2>
+            <p className="cta-text">
+              Stavím ho veřejně.
+            </p>
+            <p className="cta-text">
+              Sdílím, jak ho používám v reálném životě.
+            </p>
+            <div className="cta-with-arrow">
+              <div className="arrow-indicator-down"></div>
+              <Button 
+                className="cta-button"
+                onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
+                aria-label="Sledovat cestu na Instagramu"
+              >
+                SLEDOVAT CESTU NA INSTAGRAMU
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
 
       {/* Footer */}
       <footer className="footer">

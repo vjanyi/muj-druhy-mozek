@@ -1,9 +1,12 @@
+/* Import Playfair Display for headings */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
 /* General Layout */
 .landing-page {
   min-height: 100vh;
   background: #ffffff;
   color: #000000;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
 }
 
@@ -21,8 +24,8 @@
 
 /* Section Styles */
 section {
-  padding: 80px 24px;
-  max-width: 800px;
+  padding: 100px 24px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -30,12 +33,14 @@ section {
   position: relative;
 }
 
-.section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   color: #000000;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 /* Hero Section */
@@ -47,13 +52,14 @@ section {
   align-items: center;
   text-align: center;
   position: relative;
-  padding: 120px 24px 80px;
+  padding: 140px 24px 100px;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 9vw, 5rem);
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   color: #000000;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -61,21 +67,185 @@ section {
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   color: #444444;
   max-width: 30ch;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .hero-subline {
-  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
   font-weight: 400;
   margin-bottom: 48px;
   color: #666666;
-  max-width: 30ch;
+  max-width: 32ch;
+  line-height: 1.6;
+}
+
+.hero-highlight {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 600;
+  margin-top: 32px;
+  color: #f4a261;
+  max-width: 28ch;
   line-height: 1.5;
+  font-style: italic;
+}
+
+/* Problem Section */
+.problem-section {
+  background: #fafafa;
+  padding: 120px 24px;
+}
+
+.problem-intro {
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  margin-bottom: 24px;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.problem-bullets {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.problem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.problem-bullet {
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  color: #000000;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Story Section */
+.story-section {
+  padding: 120px 24px;
+  background: #ffffff;
+}
+
+.story-text {
+  margin: 48px 0 64px;
+  text-align: center;
+}
+
+.story-text p {
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  margin-bottom: 28px;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.story-emphasis {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 600;
+  color: #f4a261;
+  margin-top: 40px;
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.use-case-card {
+  padding: 40px 32px;
+  background: #fafafa;
+  border-left: 4px solid #f4a261;
+  transition: all 0.3s ease;
+}
+
+.use-case-card:hover {
+  background: #f5f5f5;
+  transform: translateX(4px);
+}
+
+.use-case-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.use-case-text {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* Benefit Section */
+.benefit-section {
+  padding: 120px 24px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.benefit-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #000000;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.benefit-text p {
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  margin-bottom: 24px;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.benefit-emphasis {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 600;
+  color: #f4a261;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 140px 24px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.cta-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 7vw, 3.8rem);
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #000000;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.cta-text {
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  color: #555555;
+  margin-bottom: 16px;
+  line-height: 1.6;
 }
 
 /* CTA Button */
@@ -84,233 +254,26 @@ section {
   color: #000000;
   border: none;
   border-radius: 10rem;
-  padding: 16px 40px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 20px 48px;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: none;
-  letter-spacing: -0.01em;
-  box-shadow: 0 2px 8px rgba(244, 162, 97, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.25);
+  margin-top: 40px;
+  font-family: 'Inter', sans-serif;
 }
 
 .cta-button:hover {
   background: #e89451;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(244, 162, 97, 0.35);
 }
 
 .cta-button:active {
-  transform: translateY(0);
-}
-
-/* Problem Section */
-.problem-section {
-  background: #fafafa;
-  padding: 100px 24px;
-}
-
-.problem-text {
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  margin-bottom: 20px;
-  color: #333333;
-  font-weight: 400;
-}
-
-.problem-text-emphasis {
-  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-  margin-top: 40px;
-  color: #000000;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.problem-text-repetition {
-  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-  margin-top: 48px;
-  color: #000000;
-  font-weight: 500;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-}
-
-/* Bridge Section */
-.bridge-section {
-  padding: 60px 24px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.bridge-text {
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
-  color: #555555;
-  font-weight: 400;
-  font-style: italic;
-  max-width: 35ch;
-  margin: 0 auto;
-}
-
-/* Insight Section */
-.insight-section {
-  padding: 120px 24px;
-  text-align: center;
-}
-
-.insight-title {
-  font-size: clamp(2.5rem, 7vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 32px;
-  color: #f4a261;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.insight-text {
-  font-size: clamp(1.6rem, 5vw, 2.5rem);
-  font-weight: 600;
-  margin-bottom: 32px;
-  color: #000000;
-  line-height: 1.3;
-}
-
-.insight-emphasis {
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.insight-description {
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
-  color: #555555;
-  font-weight: 400;
-  max-width: 30ch;
-  margin: 0 auto;
-}
-
-/* Solution Section */
-.solution-section {
-  padding: 100px 24px;
-  background: #fafafa;
-}
-
-.solution-text {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  margin-bottom: 24px;
-  color: #333333;
-  line-height: 1.7;
-  font-weight: 400;
-}
-
-.solution-subtext {
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
-  margin-top: 32px;
-  margin-bottom: 24px;
-  color: #555555;
-  line-height: 1.7;
-  font-style: italic;
-}
-
-/* How Section */
-.how-section {
-  padding: 100px 24px;
-}
-
-.how-text {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  margin-bottom: 24px;
-  color: #333333;
-  line-height: 1.7;
-  font-weight: 400;
-}
-
-.how-subtext {
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
-  margin-top: 40px;
-  margin-bottom: 12px;
-  color: #555555;
-  line-height: 1.7;
-}
-
-.how-subtext-emphasis {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  margin-bottom: 48px;
-  color: #000000;
-  font-weight: 600;
-  line-height: 1.7;
-}
-
-/* Benefits Section */
-.benefits-section {
-  padding: 100px 24px;
-  background: #ffffff;
-}
-
-.benefit-text {
-  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
-  margin-bottom: 28px;
-  color: #000000;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-.benefit-text-emphasis {
-  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
-  margin-top: 40px;
-  margin-bottom: 32px;
-  color: #000000;
-  line-height: 1.6;
-  font-weight: 600;
-}
-
-.benefit-subtext {
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
-  margin-top: 48px;
-  margin-bottom: 32px;
-  color: #555555;
-  line-height: 1.7;
-  font-style: italic;
-}
-
-/* About Section */
-.about-section {
-  padding: 100px 24px;
-  background: #fafafa;
-}
-
-.about-text p {
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
-  margin-bottom: 20px;
-  color: #333333;
-  line-height: 1.7;
-}
-
-.about-emphasis {
-  font-weight: 600;
-  color: #000000;
-  margin-top: 32px;
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
-}
-
-/* Final CTA Section */
-.final-cta-section {
-  padding: 120px 24px;
-  text-align: center;
-  background: #ffffff;
-}
-
-.cta-title {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.cta-subtitle {
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
-  color: #555555;
-  margin-bottom: 48px;
-  max-width: 30ch;
-  margin-left: auto;
-  margin-right: auto;
+  transform: translateY(-1px);
 }
 
 /* Footer */
@@ -324,18 +287,7 @@ section {
 .footer-text {
   font-size: 0.9rem;
   color: #888888;
-}
-
-/* Section Separator */
-.section-separator {
-  padding: 60px 24px;
-}
-
-.separator-line {
-  max-width: 600px;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #f4a261, transparent);
-  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Minimal Graphics */
@@ -344,7 +296,7 @@ section {
   height: 48px;
   border-radius: 50%;
   background: #f4a261;
-  margin: 0 auto 32px;
+  margin: 0 auto 40px;
   opacity: 0.7;
 }
 
@@ -353,25 +305,15 @@ section {
   height: 32px;
   border-radius: 50%;
   background: #f4a261;
-  margin-bottom: 24px;
   opacity: 0.6;
+  flex-shrink: 0;
 }
 
 .graphic-arrow-down {
-  margin-top: 60px;
+  margin-top: 80px;
   width: 2px;
-  height: 40px;
+  height: 50px;
   background: linear-gradient(to bottom, #f4a261, transparent);
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.5;
-}
-
-.graphic-arrow-right {
-  margin-top: 40px;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(to right, #f4a261, transparent);
   margin-left: auto;
   margin-right: auto;
   opacity: 0.5;
@@ -381,7 +323,7 @@ section {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 56px;
 }
 
 .cluster-dot {
@@ -393,7 +335,6 @@ section {
 }
 
 /* Arrow Elements */
-/* Down arrow indicator near CTA */
 .cta-with-arrow {
   position: relative;
   display: inline-block;
@@ -401,11 +342,11 @@ section {
 
 .arrow-indicator-down {
   position: absolute;
-  top: -32px;
+  top: -36px;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
-  height: 20px;
+  height: 24px;
   background: #f4a261;
   opacity: 0.5;
 }
@@ -424,93 +365,43 @@ section {
   opacity: 0.8;
 }
 
-/* Flow indicator arrow (vertical progression) */
-.arrow-flow-indicator {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, #f4a261, transparent);
-  margin: 32px auto 0;
-  opacity: 0.4;
-  position: relative;
-}
-
-.arrow-flow-indicator::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 5px solid #f4a261;
-  opacity: 0.6;
-}
-
-/* Small pointer arrow (for emphasis) */
-.benefit-with-arrow {
-  position: relative;
-  padding-left: 0;
-}
-
-.arrow-pointer-small {
-  width: 24px;
-  height: 2px;
-  background: #f4a261;
-  margin: 0 auto 20px;
-  opacity: 0.5;
-  position: relative;
-}
-
-.arrow-pointer-small::after {
-  content: '';
-  position: absolute;
-  right: -4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-left: 5px solid #f4a261;
-  opacity: 0.8;
-}
-
-/* Optional subtle animation */
-@keyframes subtle-pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.7; }
-}
-
-.arrow-flow-indicator {
-  animation: subtle-pulse 3s ease-in-out infinite;
-}
-
 /* Tablet */
 @media (min-width: 768px) {
   section {
-    padding: 100px 40px;
+    padding: 120px 40px;
   }
 
   .hero-section {
-    padding: 140px 40px 100px;
+    padding: 160px 40px 120px;
+  }
+
+  .use-cases-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .use-case-card {
+    padding: 36px 28px;
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   section {
-    padding: 120px 60px;
+    padding: 140px 60px;
   }
 
   .hero-section {
-    padding: 160px 60px 120px;
+    padding: 180px 60px 140px;
   }
 
   .problem-section,
-  .solution-section,
-  .benefits-section {
-    padding: 120px 60px;
+  .story-section,
+  .benefit-section {
+    padding: 140px 60px;
+  }
+
+  .final-cta-section {
+    padding: 160px 60px;
   }
 }
