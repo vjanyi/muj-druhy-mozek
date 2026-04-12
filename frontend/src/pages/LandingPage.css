@@ -4,6 +4,12 @@
 /* Import Amatic SC Font */
 @import './fonts/louisville.css';
 
+/* Scroll Snap for Section Navigation */
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
 /* Font Variables */
 :root {
   --font-heading: 'Amatic SC';
@@ -96,6 +102,8 @@
 section {
   padding: 100px 24px;
   width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 }
 
 .section-content {
