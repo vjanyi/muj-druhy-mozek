@@ -174,7 +174,12 @@ const LandingPage = () => {
                 Jen mi chyběl systém.
               </p>
             </div>
+          </div>
+        </section>
 
+        {/* Use Cases Section */}
+        <section className="use-cases-section fade-in" ref={addToRefs}>
+          <div className="section-content">
             <div className="use-cases-grid">
               <div className="use-case-card">
                 <h3 className="use-case-title">Zdraví</h3>
