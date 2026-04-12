@@ -6,8 +6,8 @@
 
 /* Font Variables */
 :root {
-  --font-heading: 'Amatic SC', 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Amatic SC';
+  --font-body: 'Inter';
   
   /* Light Mode Colors */
   --bg-primary: #ffffff;
