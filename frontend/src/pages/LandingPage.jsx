@@ -110,6 +110,20 @@ const LandingPage = () => {
             Ukazuju, jak si vytvořit systém,<br />
             ve kterém se k nim vrátíš.
           </p>
+          
+          {/* Subtle scroll indicator */}
+          <div className="subline-arrow">
+            <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path 
+                d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                stroke="#f4a261" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          
           <div className="graphic-arrow-down"></div>
         </section>
 

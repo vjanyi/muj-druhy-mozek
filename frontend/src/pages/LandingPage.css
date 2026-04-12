@@ -163,11 +163,33 @@ section {
   font-family: var(--font-body);
   font-size: clamp(1.15rem, 3.5vw, 1.5rem);
   font-weight: 400;
-  margin: 0 auto 48px;
+  margin: 0 auto 0;
   color: var(--text-tertiary);
   max-width: 100%;
   line-height: 1.7;
   transition: color 0.3s ease;
+}
+
+.subline-arrow {
+  margin: 32px auto 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: gentle-bounce 2s ease-in-out infinite;
+}
+
+.subline-arrow:hover {
+  opacity: 1;
+  transform: translateY(4px);
+}
+
+/* Gentle bounce animation for arrow */
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 .hero-highlight {
