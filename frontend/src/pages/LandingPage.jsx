@@ -6,6 +6,16 @@ const LandingPage = () => {
   const sectionsRef = useRef([]);
   const [darkMode, setDarkMode] = useState(false);
 
+  // Scroll to next section handler
+  const scrollToNextSection = (currentIndex) => {
+    const sections = document.querySelectorAll('section');
+    const nextSection = sections[currentIndex + 1];
+    
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   useEffect(() => {
     // Check for saved dark mode preference
     const savedTheme = localStorage.getItem('theme');
@@ -116,7 +126,7 @@ const LandingPage = () => {
           </p>
           
           {/* Subtle scroll indicator */}
-          <div className="subline-arrow">
+          <div className="subline-arrow" onClick={() => scrollToNextSection(0)}>
             <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path 
                 d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
@@ -139,7 +149,7 @@ const LandingPage = () => {
             </p>
             
             {/* Scroll indicator */}
-            <div className="subline-arrow">
+            <div className="subline-arrow" onClick={() => scrollToNextSection(1)}>
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path 
                   d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
@@ -183,7 +193,7 @@ const LandingPage = () => {
             </div>
             
             {/* Scroll indicator */}
-            <div className="subline-arrow">
+            <div className="subline-arrow" onClick={() => scrollToNextSection(2)}>
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path 
                   d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
@@ -218,7 +228,7 @@ const LandingPage = () => {
             </div>
             
             {/* Scroll indicator */}
-            <div className="subline-arrow">
+            <div className="subline-arrow" onClick={() => scrollToNextSection(3)}>
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path 
                   d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
@@ -260,7 +270,7 @@ const LandingPage = () => {
             </div>
             
             {/* Scroll indicator */}
-            <div className="subline-arrow">
+            <div className="subline-arrow" onClick={() => scrollToNextSection(4)}>
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path 
                   d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
@@ -302,7 +312,7 @@ const LandingPage = () => {
             </div>
             
             {/* Scroll indicator */}
-            <div className="subline-arrow">
+            <div className="subline-arrow" onClick={() => scrollToNextSection(5)}>
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path 
                   d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
@@ -328,7 +338,6 @@ const LandingPage = () => {
               Sdílím, jak ho používám v reálném životě.
             </p>
             <div className="cta-with-arrow">
-              <div className="arrow-indicator-down"></div>
               <Button 
                 className="cta-button"
                 onClick={() => window.open('https://www.instagram.com/muj_druhy_mozek/', '_blank')}
