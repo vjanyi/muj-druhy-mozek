@@ -39,7 +39,7 @@ const LandingPage = () => {
     }
 
     try {
-      // Save email to ECOMAIL FIRST
+      // Try to save email to ECOMAIL
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -50,28 +50,43 @@ const LandingPage = () => {
         })
       });
 
+      // Download PDF regardless of API success (user experience first)
+      const link = document.createElement('a');
+      link.href = '/druhy-mozek-guide.pdf';
+      link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
+      link.click();
+
       if (response.ok) {
-        // Email saved successfully - NOW download PDF
-        const link = document.createElement('a');
-        link.href = '/druhy-mozek-guide.pdf';
-        link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
-        link.click();
-        
-        setEmailSubmitted(true);
-        
-        // Reset form after 5 seconds
-        setTimeout(() => {
-          setEmail('');
-          setEmailSubmitted(false);
-        }, 5000);
+        // Email saved successfully
+        console.log('Email uložen do ECOMAIL');
       } else {
-        // API error - show error message
-        const data = await response.json();
-        alert(data.message || 'Něco se pokazilo. Zkuste to prosím znovu.');
+        // API failed but PDF downloaded
+        console.warn('ECOMAIL API selhalo, ale PDF staženo');
       }
+      
+      setEmailSubmitted(true);
+      
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setEmail('');
+        setEmailSubmitted(false);
+      }, 5000);
+      
     } catch (error) {
-      console.error('Email submission error:', error);
-      alert('Nelze se připojit k serveru. Zkontrolujte připojení k internetu.');
+      // Network error - still download PDF
+      console.error('Chyba:', error);
+      
+      const link = document.createElement('a');
+      link.href = '/druhy-mozek-guide.pdf';
+      link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
+      link.click();
+      
+      setEmailSubmitted(true);
+      
+      setTimeout(() => {
+        setEmail('');
+        setEmailSubmitted(false);
+      }, 5000);
     }
   };
 
