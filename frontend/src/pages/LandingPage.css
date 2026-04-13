@@ -737,7 +737,7 @@ section {
 
 /* Email Signup Section */
 .email-signup-section {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   margin: 100px auto;
   padding: 100px 24px;
   scroll-snap-align: start;
@@ -857,10 +857,20 @@ section {
 
 /* Instagram Feed Section */
 .instagram-feed-section {
-  background: var(--bg-primary);
-  padding: 120px 24px;
+  background: var(--bg-secondary);
+  padding: 80px 24px 100px;
   scroll-snap-align: start;
   transition: background 0.3s ease;
+}
+
+.instagram-separator {
+  width: 120px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto 60px;
+  border-radius: 2px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .instagram-heading {

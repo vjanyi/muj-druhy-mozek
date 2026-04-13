@@ -598,12 +598,8 @@ const LandingPage = () => {
         {/* Instagram Feed Section */}
         <section className="instagram-feed-section fade-in" ref={addToRefs}>
           <div className="section-content">
-            <div className="graphic-dot"></div>
-            
-            <h2 className="instagram-heading">Sleduj cestu v reálném čase</h2>
-            <p className="instagram-subheading">
-              Ukazuju, jak stavím druhý mozek – bez filtrů, v reálném životě.
-            </p>
+            {/* Horizontal separator line */}
+            <div className="instagram-separator"></div>
             
             {/* Instagram Posts Grid - Placeholder for Lightwidget */}
             <div className="instagram-posts-grid">
