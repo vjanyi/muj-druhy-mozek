@@ -434,6 +434,9 @@ section {
   font-weight: 700;
   color: var(--accent);
   margin: 40px auto 0;
+  font-style: normal;
+  letter-spacing: 0.01em;
+}
 
 /* Share Section */
 .share-section {
