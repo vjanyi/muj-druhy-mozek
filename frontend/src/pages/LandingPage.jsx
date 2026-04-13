@@ -40,14 +40,8 @@ const LandingPage = () => {
       return;
     }
 
-    // Trigger PDF download IMMEDIATELY (works on localhost and production)
-    const link = document.createElement('a');
-    link.href = '/druhy-mozek-guide.pdf';
-    link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
-    link.click();
-
     try {
-      // Save email to ECOMAIL via Vercel serverless function
+      // Save email to ECOMAIL FIRST
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -59,33 +53,27 @@ const LandingPage = () => {
       });
 
       if (response.ok) {
+        // Email saved successfully - NOW download PDF
+        const link = document.createElement('a');
+        link.href = '/druhy-mozek-guide.pdf';
+        link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
+        link.click();
+        
         setEmailSubmitted(true);
         
-        // Show success message
+        // Reset form after 5 seconds
         setTimeout(() => {
           setEmail('');
           setEmailSubmitted(false);
         }, 5000);
       } else {
-        // Even if API fails, user got the PDF
-        setEmailSubmitted(true);
-        console.warn('ECOMAIL API error, but PDF downloaded');
-        
-        setTimeout(() => {
-          setEmail('');
-          setEmailSubmitted(false);
-        }, 5000);
+        // API error - show error message
+        const data = await response.json();
+        alert(data.message || 'Něco se pokazilo. Zkuste to prosím znovu.');
       }
     } catch (error) {
-      // Even if API fails, user got the PDF
-      setEmailSubmitted(true);
       console.error('Email submission error:', error);
-      console.log('PDF downloaded, but email not saved to ECOMAIL');
-      
-      setTimeout(() => {
-        setEmail('');
-        setEmailSubmitted(false);
-      }, 5000);
+      alert('Nelze se připojit k serveru. Zkontrolujte připojení k internetu.');
     }
   };
 
