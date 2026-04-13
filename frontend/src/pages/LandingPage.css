@@ -670,7 +670,7 @@ section {
 .final-cta-section {
   padding: 140px 24px;
   text-align: center;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   transition: background-color 0.3s ease;
 }
 
@@ -856,11 +856,17 @@ section {
 }
 
 /* Instagram Feed Section */
+/* Instagram Feed Section - Darker grey footer */
 .instagram-feed-section {
-  background: var(--bg-secondary);
+  background: #ececec;
   padding: 80px 24px 100px;
   scroll-snap-align: start;
   transition: background 0.3s ease;
+}
+
+/* Dark mode - darker grey */
+.dark-mode .instagram-feed-section {
+  background: #1f1f1f;
 }
 
 .instagram-separator {
@@ -871,6 +877,11 @@ section {
   border-radius: 2px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+}
+
+.instagram-widget-container {
+  max-width: 1000px;
+  margin: 0 auto 48px;
 }
 
 .instagram-heading {

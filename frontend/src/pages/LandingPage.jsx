@@ -601,35 +601,16 @@ const LandingPage = () => {
             {/* Horizontal separator line */}
             <div className="instagram-separator"></div>
             
-            {/* Instagram Posts Grid - Placeholder for Lightwidget */}
-            <div className="instagram-posts-grid">
-              <div className="instagram-post-card">
-                <div className="instagram-post-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--accent)" strokeWidth="2"/>
-                    <circle cx="12" cy="12" r="3" stroke="var(--accent)" strokeWidth="2"/>
-                  </svg>
-                  <p>Nejnovější příspěvek</p>
-                </div>
-              </div>
-              <div className="instagram-post-card">
-                <div className="instagram-post-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--accent)" strokeWidth="2"/>
-                    <circle cx="12" cy="12" r="3" stroke="var(--accent)" strokeWidth="2"/>
-                  </svg>
-                  <p>Druhý příspěvek</p>
-                </div>
-              </div>
-              <div className="instagram-post-card">
-                <div className="instagram-post-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--accent)" strokeWidth="2"/>
-                    <circle cx="12" cy="12" r="3" stroke="var(--accent)" strokeWidth="2"/>
-                  </svg>
-                  <p>Třetí příspěvek</p>
-                </div>
-              </div>
+            {/* Lightwidget Instagram Feed */}
+            <div className="instagram-widget-container">
+              <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+              <iframe 
+                src="//lightwidget.com/widgets/356cacc2e901580faec30bbb7070da67.html" 
+                scrolling="no" 
+                allowtransparency="true" 
+                className="lightwidget-widget" 
+                style={{width: '100%', border: 0, overflow: 'hidden'}}
+              ></iframe>
             </div>
             
             <a 
