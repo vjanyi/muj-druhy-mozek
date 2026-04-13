@@ -495,14 +495,6 @@ const LandingPage = () => {
           <div className="section-content">
             <div className="graphic-dot"></div>
             
-            {/* Social Proof Counter */}
-            <div className="social-proof-counter">
-              <span className="counter-icon">🎉</span>
-              <span className="counter-text">
-                Právě si <strong>{downloadCount.toLocaleString('cs-CZ')}</strong> lidí stáhlo průvodce
-              </span>
-            </div>
-            
             <h2 className="email-signup-heading">Získej 5 prvních kroků, jak začít i s příklady z praxe</h2>
             <p className="email-signup-text">
               Stáhni si návod, jak začít s budováním vlastního druhého mozku
