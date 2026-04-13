@@ -471,9 +471,9 @@ const LandingPage = () => {
           <div className="section-content">
             <div className="graphic-dot"></div>
             
-            <h2 className="email-signup-heading">Chceš průvodce zdarma?</h2>
+            <h2 className="email-signup-heading">Získej 5 prvních kroků, jak začít i s příklady z praxe</h2>
             <p className="email-signup-text">
-              Pošlu ti PDF s tipy, jak začít stavět vlastní druhý mozek.
+              Stáhni si návod, jak začít s budováním vlastního druhého mozku
             </p>
             
             <form onSubmit={(e) => handleEmailSubmit(e, 'bottom')} className="email-form">

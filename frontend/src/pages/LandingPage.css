@@ -800,7 +800,7 @@ section {
   gap: 16px;
   max-width: 500px;
   margin: 0 auto 32px;
-  align-items: stretch;
+  align-items: center;
 }
 
 .email-input {
