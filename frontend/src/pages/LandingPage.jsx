@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '../components/ui/button';
 import confetti from 'canvas-confetti';
+import ThankYouPage from '../components/ThankYouPage';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -8,9 +9,12 @@ const LandingPage = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
-  const [showEmailForm, setShowEmailForm] = useState(false);
   const [email, setEmail] = useState('');
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [downloadCount, setDownloadCount] = useState(847); // Social proof counter
 
   const fullText = 'Ale skoro se k nim nevracíš.';
 
@@ -29,7 +33,7 @@ const LandingPage = () => {
     return () => clearInterval(typingInterval);
   }, []);
 
-  // Email form handler
+  // Email form handler with loading states
   const handleEmailSubmit = async (e, location) => {
     e.preventDefault();
     
@@ -37,6 +41,8 @@ const LandingPage = () => {
       alert('Prosím zadejte platný e-mail');
       return;
     }
+
+    setIsLoading(true); // Start loading
 
     try {
       // Try to save email to ECOMAIL
@@ -50,38 +56,45 @@ const LandingPage = () => {
         })
       });
 
-      // Download PDF regardless of API success (user experience first)
+      // Download PDF regardless of API success
       const link = document.createElement('a');
       link.href = '/druhy-mozek-guide.pdf';
       link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
       link.click();
 
       if (response.ok) {
-        // Email saved successfully
         console.log('Email uložen do ECOMAIL');
+        // Increment download counter
+        setDownloadCount(prev => prev + 1);
       } else {
-        // API failed but PDF downloaded
         console.warn('ECOMAIL API selhalo, ale PDF staženo');
       }
       
       setEmailSubmitted(true);
+      setIsLoading(false);
       
-      // Reset form after 5 seconds
+      // Show Thank You page
+      setTimeout(() => {
+        setShowThankYou(true);
+      }, 500);
+      
+      // Reset form after Thank You closes
       setTimeout(() => {
         setEmail('');
         setEmailSubmitted(false);
-      }, 5000);
+      }, 10000);
       
     } catch (error) {
-      // Network error - still download PDF
       console.error('Chyba:', error);
       
+      // Download PDF even on error
       const link = document.createElement('a');
       link.href = '/druhy-mozek-guide.pdf';
       link.download = 'Muj-Druhy-Mozek-Prvnich-5-Kroku.pdf';
       link.click();
       
       setEmailSubmitted(true);
+      setIsLoading(false);
       
       setTimeout(() => {
         setEmail('');
@@ -90,17 +103,28 @@ const LandingPage = () => {
     }
   };
 
-  // Scroll progress tracker
+  // Scroll progress tracker + Back to top visibility
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
+      
+      // Show back to top button after scrolling 300px
+      setShowBackToTop(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Back to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   // Scroll to next section handler
   const scrollToNextSection = (currentIndex) => {
@@ -471,6 +495,14 @@ const LandingPage = () => {
           <div className="section-content">
             <div className="graphic-dot"></div>
             
+            {/* Social Proof Counter */}
+            <div className="social-proof-counter">
+              <span className="counter-icon">🎉</span>
+              <span className="counter-text">
+                Právě si <strong>{downloadCount.toLocaleString('cs-CZ')}</strong> lidí stáhlo průvodce
+              </span>
+            </div>
+            
             <h2 className="email-signup-heading">Získej 5 prvních kroků, jak začít i s příklady z praxe</h2>
             <p className="email-signup-text">
               Stáhni si návod, jak začít s budováním vlastního druhého mozku
@@ -484,9 +516,23 @@ const LandingPage = () => {
                 placeholder="Tvůj e-mail"
                 className="email-input"
                 required
+                disabled={isLoading || emailSubmitted}
               />
-              <Button type="submit" className="email-submit-button">
-                {emailSubmitted ? 'ODESLÁNO ✓' : 'STÁHNOUT PDF'}
+              <Button 
+                type="submit" 
+                className="email-submit-button"
+                disabled={isLoading || emailSubmitted}
+              >
+                {isLoading ? (
+                  <>
+                    <span className="spinner"></span>
+                    Ukládám email...
+                  </>
+                ) : emailSubmitted ? (
+                  'ODESLÁNO ✓'
+                ) : (
+                  'STÁHNOUT PDF'
+                )}
               </Button>
             </form>
             
@@ -613,6 +659,24 @@ const LandingPage = () => {
       <footer className="footer">
         <p className="footer-text">Můj druhý mozek • 2026</p>
       </footer>
+
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button 
+          className="back-to-top" 
+          onClick={scrollToTop}
+          aria-label="Zpět nahoru"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      )}
+
+      {/* Thank You Page Modal */}
+      {showThankYou && (
+        <ThankYouPage onClose={() => setShowThankYou(false)} />
+      )}
     </div>
   );
 };
