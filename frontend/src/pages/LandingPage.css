@@ -347,8 +347,6 @@ section {
 .email-capture-box,
 .email-capture-title,
 .email-capture-subtitle,
-.email-form,
-.email-input,
 .email-submit-btn,
 .email-privacy,
 .email-success,
@@ -802,7 +800,7 @@ section {
   gap: 16px;
   max-width: 500px;
   margin: 0 auto 32px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .email-input {

@@ -23,8 +23,6 @@ const LandingPage = () => {
         currentIndex++;
       } else {
         clearInterval(typingInterval);
-        // Show email form after typewriter finishes
-        setTimeout(() => setShowEmailForm(true), 500);
       }
     }, 80); // 80ms per character
 
@@ -243,42 +241,6 @@ const LandingPage = () => {
             {typewriterText}
             <span className="typewriter-cursor">|</span>
           </p>
-          
-          {/* Email Capture Form - Hero */}
-          {showEmailForm && (
-            <div className="email-signup-minimal fade-in">
-              <h3 className="signup-headline">Začni se vracet k poznámkám.</h3>
-              
-              <p className="signup-body">
-                Krátký průvodce,<br />
-                který ti ukáže první krok k systému.
-              </p>
-              
-              {!emailSubmitted ? (
-                <>
-                  <form onSubmit={(e) => handleEmailSubmit(e, 'hero')} className="signup-form">
-                    <input 
-                      type="email" 
-                      placeholder="tvuj@email.cz"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="signup-input"
-                      required
-                    />
-                    <button type="submit" className="signup-button">
-                      Stáhnout zdarma
-                    </button>
-                  </form>
-                  
-                  <p className="signup-trust">Bez tlaku. Jen věci, které dávají smysl.</p>
-                </>
-              ) : (
-                <div className="signup-success">
-                  <p className="success-message">✓ PDF se stahuje. Děkuji!</p>
-                </div>
-              )}
-            </div>
-          )}
           
           {/* Visual separator - result indicator */}
           <div className="result-divider"></div>
