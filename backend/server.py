@@ -2,7 +2,6 @@ from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
-from routes import emails
 import os
 import logging
 from pathlib import Path
@@ -68,8 +67,6 @@ async def get_status_checks():
     return status_checks
 
 # Include the router in the main app
-app.include_router(emails.router, prefix="/api/emails", tags=["emails"])
-
 app.include_router(api_router)
 
 app.add_middleware(

@@ -41,11 +41,15 @@ const LandingPage = () => {
     }
 
     try {
-      // Save email to backend
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/emails/subscribe`, {
+      // Save email to ECOMAIL via Vercel serverless function
+      const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: location })
+        body: JSON.stringify({ 
+          email, 
+          firstName: 'Subscriber', // Default first name
+          lastName: ''
+        })
       });
 
       if (response.ok) {
