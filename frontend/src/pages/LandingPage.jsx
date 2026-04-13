@@ -481,6 +481,51 @@ const LandingPage = () => {
           </div>
         </section>
 
+        {/* Email Signup Section */}
+        <section className="email-signup-section fade-in" ref={addToRefs}>
+          <div className="section-content">
+            <div className="graphic-dot"></div>
+            
+            <h2 className="email-signup-heading">Chceš průvodce zdarma?</h2>
+            <p className="email-signup-text">
+              Pošlu ti PDF s tipy, jak začít stavět vlastní druhý mozek.
+            </p>
+            
+            <form onSubmit={(e) => handleEmailSubmit(e, 'bottom')} className="email-form">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Tvůj e-mail"
+                className="email-input"
+                required
+              />
+              <Button type="submit" className="email-submit-button">
+                {emailSubmitted ? 'ODESLÁNO ✓' : 'STÁHNOUT PDF'}
+              </Button>
+            </form>
+            
+            {emailSubmitted && (
+              <p className="email-success-message">
+                Díky! PDF si můžeš stáhnout níže.
+              </p>
+            )}
+            
+            {/* Scroll arrow to Final CTA */}
+            <div className="subline-arrow" onClick={() => scrollToNextSection(6)}>
+              <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M10 2 L10 26 M10 26 L4 20 M10 26 L16 20" 
+                  stroke="#f4a261" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA Section */}
         <section className="final-cta-section fade-in" ref={addToRefs}>
           <div className="section-content">
