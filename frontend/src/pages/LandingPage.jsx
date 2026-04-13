@@ -7,6 +7,67 @@ const LandingPage = () => {
   const sectionsRef = useRef([]);
   const [darkMode, setDarkMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [typewriterText, setTypewriterText] = useState('');
+  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [email, setEmail] = useState('');
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+  const fullText = 'Ale skoro se k nim nevracíš.';
+
+  // Typewriter effect
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setTypewriterText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+        // Show email form after typewriter finishes
+        setTimeout(() => setShowEmailForm(true), 500);
+      }
+    }, 80); // 80ms per character
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
+  // Email form handler
+  const handleEmailSubmit = async (e, location) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      alert('Prosím zadejte platný e-mail');
+      return;
+    }
+
+    try {
+      // Save email to backend
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/emails/subscribe`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: location })
+      });
+
+      if (response.ok) {
+        setEmailSubmitted(true);
+        
+        // Trigger PDF download
+        const link = document.createElement('a');
+        link.href = '/druhy-mozek-guide.pdf';
+        link.download = 'Můj Druhý Mozek - Průvodce.pdf';
+        link.click();
+        
+        // Show success message
+        setTimeout(() => {
+          setEmail('');
+          setEmailSubmitted(false);
+        }, 5000);
+      }
+    } catch (error) {
+      console.error('Email submission error:', error);
+      alert('Něco se pokazilo. Zkuste to prosím znovu.');
+    }
+  };
 
   // Scroll progress tracker
   useEffect(() => {
@@ -170,9 +231,41 @@ const LandingPage = () => {
           <h1 className="hero-title">
             Píšeš si poznámky.
           </h1>
-          <p className="hero-subtitle">
-            Ale skoro se k nim nevracíš.
+          <p className="hero-subtitle typewriter">
+            {typewriterText}
+            <span className="typewriter-cursor">|</span>
           </p>
+          
+          {/* Email Capture Form - Hero */}
+          {showEmailForm && (
+            <div className="email-capture-box fade-in">
+              {!emailSubmitted ? (
+                <>
+                  <h3 className="email-capture-title">📥 Stáhni si zdarma PDF průvodce</h3>
+                  <p className="email-capture-subtitle">5 kroků k fungujícímu systému poznámek</p>
+                  <form onSubmit={(e) => handleEmailSubmit(e, 'hero')} className="email-form">
+                    <input 
+                      type="email" 
+                      placeholder="tvuj@email.cz"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="email-input"
+                      required
+                    />
+                    <button type="submit" className="email-submit-btn">
+                      Stáhnout PDF
+                    </button>
+                  </form>
+                  <p className="email-privacy">🔒 Žádný spam, jen užitečný obsah</p>
+                </>
+              ) : (
+                <div className="email-success">
+                  <p className="success-icon">✅</p>
+                  <p className="success-text">PDF se stahuje! Zkontroluj také e-mail.</p>
+                </div>
+              )}
+            </div>
+          )}
           
           {/* Visual separator - result indicator */}
           <div className="result-divider"></div>
@@ -387,6 +480,36 @@ const LandingPage = () => {
         <section className="final-cta-section fade-in" ref={addToRefs}>
           <div className="section-content">
             <div className="graphic-dot"></div>
+            
+            {/* Email Capture Form - Bottom */}
+            <div className="email-capture-box email-capture-bottom">
+              {!emailSubmitted ? (
+                <>
+                  <h3 className="email-capture-title">📥 Ještě nemáš průvodce?</h3>
+                  <p className="email-capture-subtitle">Stáhni si PDF zdarma a začni si organizovat myšlenky</p>
+                  <form onSubmit={(e) => handleEmailSubmit(e, 'bottom')} className="email-form">
+                    <input 
+                      type="email" 
+                      placeholder="tvuj@email.cz"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="email-input"
+                      required
+                    />
+                    <button type="submit" className="email-submit-btn">
+                      Stáhnout PDF
+                    </button>
+                  </form>
+                  <p className="email-privacy">🔒 Žádný spam, jen užitečný obsah</p>
+                </>
+              ) : (
+                <div className="email-success">
+                  <p className="success-icon">✅</p>
+                  <p className="success-text">PDF se stahuje! Zkontroluj také e-mail.</p>
+                </div>
+              )}
+            </div>
+            
             <h2 className="cta-heading">Chceš vidět, jak to vypadá v praxi?</h2>
             <p className="cta-text">
               Stavím ho veřejně.
