@@ -527,7 +527,7 @@ const LandingPage = () => {
             
             {emailSubmitted && (
               <p className="email-success-message">
-                Díky! PDF si můžeš stáhnout níže.
+                ✓ Hotovo! PDF se právě stahuje do vašeho zařízení.
               </p>
             )}
             
