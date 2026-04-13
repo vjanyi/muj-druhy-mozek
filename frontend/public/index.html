@@ -5,27 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#f4a261" />
         
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://muj-druhy-mozek.vercel.app/" />
+        
         <!-- SEO Meta Tags -->
-        <title>Druhý mozek: Jak si uspořádat poznámky a přestat zapomínat</title>
+        <title>Můj druhý mozek - Jak si uspořádat poznámky a přestat zapomínat</title>
         <meta name="description" content="Zapomínáš nápady a máš poznámky všude? Ukazuju, jak si vytvořit systém, ve kterém se k nim vrátíš. Bez složitých nástrojů, v reálném životě." />
-        <meta name="keywords" content="druhý mozek, organizace poznámek, jak si dělat poznámky, systém poznámek, digitální poznámky, jak si pamatovat věci, produktivita" />
+        <meta name="keywords" content="druhý mozek, organizace poznámek, jak si dělat poznámky, systém poznámek, digitální poznámky, jak si pamatovat věci, produktivita, osobní knowledge management" />
         <meta name="author" content="Můj druhý mozek" />
+        <meta name="robots" content="index, follow" />
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Druhý mozek: Jak si uspořádat poznámky a přestat zapomínat" />
+        <meta property="og:url" content="https://muj-druhy-mozek.vercel.app/" />
+        <meta property="og:site_name" content="Můj druhý mozek" />
+        <meta property="og:title" content="Můj druhý mozek - Jak si uspořádat poznámky a přestat zapomínat" />
         <meta property="og:description" content="Zapomínáš nápady a máš poznámky všude? Ukazuju, jak si vytvořit systém, ve kterém se k nim vrátíš." />
+        <meta property="og:locale" content="cs_CZ" />
         
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Druhý mozek: Jak si uspořádat poznámky a přestat zapomínat" />
+        <meta property="twitter:url" content="https://muj-druhy-mozek.vercel.app/" />
+        <meta property="twitter:title" content="Můj druhý mozek - Jak si uspořádat poznámky a přestat zapomínat" />
         <meta property="twitter:description" content="Zapomínáš nápady a máš poznámky všude? Ukazuju, jak si vytvořit systém, ve kterém se k nim vrátíš." />
+        
+        <!-- Performance: DNS Prefetch -->
+        <link rel="dns-prefetch" href="https://www.instagram.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         <!-- Fonts - Preconnect for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         
         <!-- Preload critical fonts -->
+        <link rel="preload" href="/static/media/Amatic-Regular.woff" as="font" type="font/woff" crossorigin />
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
         
@@ -43,6 +56,31 @@
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-42R17NK4JX');
+        </script>
+        
+        <!-- Structured Data (JSON-LD) for SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Můj druhý mozek",
+          "url": "https://muj-druhy-mozek.vercel.app/",
+          "description": "Systém pro organizaci poznámek a myšlenek - druhý mozek pro reálný život",
+          "inLanguage": "cs",
+          "author": {
+            "@type": "Person",
+            "name": "Můj druhý mozek",
+            "jobTitle": "Marketingová ředitelka",
+            "sameAs": [
+              "https://www.instagram.com/muj_druhy_mozek/"
+            ]
+          },
+          "potentialAction": {
+            "@type": "FollowAction",
+            "target": "https://www.instagram.com/muj_druhy_mozek/",
+            "name": "Sledovat na Instagramu"
+          }
+        }
         </script>
         
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>

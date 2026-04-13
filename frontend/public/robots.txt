@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /static/
+
+Sitemap: https://muj-druhy-mozek.vercel.app/sitemap.xml

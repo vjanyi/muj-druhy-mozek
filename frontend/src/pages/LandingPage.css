@@ -10,6 +10,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.scroll-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.1s ease;
+  box-shadow: 0 0 10px rgba(244, 162, 97, 0.5);
+}
+
 /* Font Variables */
 :root {
   --font-heading: 'Amatic SC';
@@ -415,8 +434,73 @@ section {
   font-weight: 700;
   color: var(--accent);
   margin: 40px auto 0;
-  font-style: normal;
-  letter-spacing: 0.01em;
+
+/* Share Section */
+.share-section {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.share-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  color: var(--text-tertiary);
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.share-button:hover {
+  background: var(--accent);
+  color: #000000;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.3);
+}
+
+.share-button:active {
+  transform: translateY(0);
+}
+
+.share-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.share-native {
+  min-width: 120px;
+}
+
+.share-twitter,
+.share-linkedin {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  justify-content: center;
 }
 
 /* Final CTA Section */
