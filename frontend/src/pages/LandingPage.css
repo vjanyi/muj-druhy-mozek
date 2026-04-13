@@ -357,6 +357,10 @@ section {
   max-width: 100%;
   line-height: 1.7;
   transition: color 0.3s ease;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subline-arrow {
@@ -519,6 +523,14 @@ section {
   color: var(--accent);
   margin: 40px auto 0;
   letter-spacing: 0.01em;
+}
+
+/* Use Cases Section - Mobile centered */
+.use-cases-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
 }
 
 .use-cases-grid {
