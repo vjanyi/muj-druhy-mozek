@@ -586,7 +586,7 @@ const LandingPage = () => {
             <div className="instagram-widget-container">
               <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
               <iframe 
-                src="//lightwidget.com/widgets/602eadf5db2b5722a1154722e16d5233.html" 
+                src="//lightwidget.com/widgets/5752f1dd51d953e4880575407b99c24c.html" 
                 scrolling="no" 
                 allowtransparency="true" 
                 className="lightwidget-widget" 
