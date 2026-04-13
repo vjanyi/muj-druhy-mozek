@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "framework": "create-react-app"
+  "env": {
+    "ECOMAIL_API_KEY": "2b0adccba47da8496b64d51b80521f8d5a3c4ed03efccf015d92de2fd35cf86a",
+    "ECOMAIL_LIST_ID": "1"
+  }
 }
