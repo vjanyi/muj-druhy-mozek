@@ -191,15 +191,20 @@ section {
 }
 
 /* Minimalist Email Signup Block */
+.email-signup-section {
+  padding: 100px 24px;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
 .email-signup-minimal {
   max-width: 520px;
-  margin: 64px auto;
-  padding: 0 24px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .email-signup-bottom {
-  margin-bottom: 80px;
+  margin-bottom: 0;
 }
 
 .signup-headline {

@@ -486,40 +486,6 @@ const LandingPage = () => {
           <div className="section-content">
             <div className="graphic-dot"></div>
             
-            {/* Email Capture Form - Bottom */}
-            <div className="email-signup-minimal email-signup-bottom">
-              <h3 className="signup-headline">Začni se vracet k poznámkám.</h3>
-              
-              <p className="signup-body">
-                Krátký průvodce,<br />
-                který ti ukáže první krok k systému.
-              </p>
-              
-              {!emailSubmitted ? (
-                <>
-                  <form onSubmit={(e) => handleEmailSubmit(e, 'bottom')} className="signup-form">
-                    <input 
-                      type="email" 
-                      placeholder="tvuj@email.cz"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="signup-input"
-                      required
-                    />
-                    <button type="submit" className="signup-button">
-                      Stáhnout zdarma
-                    </button>
-                  </form>
-                  
-                  <p className="signup-trust">Bez tlaku. Jen věci, které dávají smysl.</p>
-                </>
-              ) : (
-                <div className="signup-success">
-                  <p className="success-message">✓ PDF se stahuje. Děkuji!</p>
-                </div>
-              )}
-            </div>
-            
             <h2 className="cta-heading">Chceš vidět, jak to vypadá v praxi?</h2>
             <p className="cta-text">
               Stavím ho veřejně.
