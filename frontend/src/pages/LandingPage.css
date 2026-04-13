@@ -190,132 +190,138 @@ section {
   }
 }
 
-/* Email Capture Box */
-.email-capture-box {
-  background: var(--card-bg);
-  border: 2px solid var(--accent);
-  border-radius: 16px;
-  padding: 40px 32px;
-  margin: 48px auto;
-  max-width: 500px;
+/* Minimalist Email Signup Block */
+.email-signup-minimal {
+  max-width: 520px;
+  margin: 64px auto;
+  padding: 0 24px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(244, 162, 97, 0.15);
-  transition: all 0.3s ease;
 }
 
-.email-capture-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(244, 162, 97, 0.25);
+.email-signup-bottom {
+  margin-bottom: 80px;
 }
 
-.email-capture-bottom {
-  margin-bottom: 64px;
-}
-
-.email-capture-title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  color: var(--text-primary);
-  margin-bottom: 12px;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.email-capture-subtitle {
+.signup-headline {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: var(--text-secondary);
-  margin-bottom: 24px;
-  line-height: 1.5;
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   transition: color 0.3s ease;
 }
 
-.email-form {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 16px;
+.signup-body {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 400;
+  color: var(--text-tertiary);
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
-.email-input {
+.signup-form {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 20px 0;
+}
+
+.signup-input {
   flex: 1;
-  min-width: 200px;
   padding: 14px 20px;
-  border: 2px solid var(--border-color);
-  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   font-family: var(--font-body);
   font-size: 1rem;
   background: var(--bg-primary);
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.email-input:focus {
+.signup-input::placeholder {
+  color: var(--text-light);
+}
+
+.signup-input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.1);
+  box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.08);
 }
 
-.email-submit-btn {
-  padding: 14px 32px;
+.signup-button {
+  padding: 14px 28px;
   background: var(--accent);
   color: #000000;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
-.email-submit-btn:hover {
+.signup-button:hover {
   background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.2);
 }
 
-.email-submit-btn:active {
+.signup-button:active {
   transform: translateY(0);
 }
 
-.email-privacy {
+.signup-trust {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 400;
   color: var(--text-muted);
-  margin-top: 8px;
+  margin: 0;
   transition: color 0.3s ease;
 }
 
-.email-success {
-  padding: 20px;
+.signup-success {
+  padding: 40px 20px;
 }
 
-.success-icon {
-  font-size: 3rem;
-  margin-bottom: 12px;
-}
-
-.success-text {
+.success-message {
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 500;
+  margin: 0;
 }
 
-/* Mobile responsive */
+/* Mobile: Stack input + button */
 @media (max-width: 640px) {
-  .email-form {
+  .signup-form {
     flex-direction: column;
+    gap: 12px;
   }
   
-  .email-input {
+  .signup-button {
     width: 100%;
   }
 }
+
+/* Legacy email capture styles - remove */
+.email-capture-box,
+.email-capture-title,
+.email-capture-subtitle,
+.email-form,
+.email-input,
+.email-submit-btn,
+.email-privacy,
+.email-success,
+.success-icon,
+.success-text {
+  display: none;
+}
+
 
   font-family: var(--font-body);
   font-size: clamp(1.4rem, 4.5vw, 2rem);

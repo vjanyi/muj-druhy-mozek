@@ -238,30 +238,35 @@ const LandingPage = () => {
           
           {/* Email Capture Form - Hero */}
           {showEmailForm && (
-            <div className="email-capture-box fade-in">
+            <div className="email-signup-minimal fade-in">
+              <h3 className="signup-headline">Začni se vracet k poznámkám.</h3>
+              
+              <p className="signup-body">
+                Krátký průvodce,<br />
+                který ti ukáže první krok k systému.
+              </p>
+              
               {!emailSubmitted ? (
                 <>
-                  <h3 className="email-capture-title">📥 Stáhni si zdarma PDF průvodce</h3>
-                  <p className="email-capture-subtitle">5 kroků k fungujícímu systému poznámek</p>
-                  <form onSubmit={(e) => handleEmailSubmit(e, 'hero')} className="email-form">
+                  <form onSubmit={(e) => handleEmailSubmit(e, 'hero')} className="signup-form">
                     <input 
                       type="email" 
                       placeholder="tvuj@email.cz"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="email-input"
+                      className="signup-input"
                       required
                     />
-                    <button type="submit" className="email-submit-btn">
-                      Stáhnout PDF
+                    <button type="submit" className="signup-button">
+                      Stáhnout zdarma
                     </button>
                   </form>
-                  <p className="email-privacy">🔒 Žádný spam, jen užitečný obsah</p>
+                  
+                  <p className="signup-trust">Bez tlaku. Jen věci, které dávají smysl.</p>
                 </>
               ) : (
-                <div className="email-success">
-                  <p className="success-icon">✅</p>
-                  <p className="success-text">PDF se stahuje! Zkontroluj také e-mail.</p>
+                <div className="signup-success">
+                  <p className="success-message">✓ PDF se stahuje. Děkuji!</p>
                 </div>
               )}
             </div>
@@ -482,30 +487,35 @@ const LandingPage = () => {
             <div className="graphic-dot"></div>
             
             {/* Email Capture Form - Bottom */}
-            <div className="email-capture-box email-capture-bottom">
+            <div className="email-signup-minimal email-signup-bottom">
+              <h3 className="signup-headline">Začni se vracet k poznámkám.</h3>
+              
+              <p className="signup-body">
+                Krátký průvodce,<br />
+                který ti ukáže první krok k systému.
+              </p>
+              
               {!emailSubmitted ? (
                 <>
-                  <h3 className="email-capture-title">📥 Ještě nemáš průvodce?</h3>
-                  <p className="email-capture-subtitle">Stáhni si PDF zdarma a začni si organizovat myšlenky</p>
-                  <form onSubmit={(e) => handleEmailSubmit(e, 'bottom')} className="email-form">
+                  <form onSubmit={(e) => handleEmailSubmit(e, 'bottom')} className="signup-form">
                     <input 
                       type="email" 
                       placeholder="tvuj@email.cz"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="email-input"
+                      className="signup-input"
                       required
                     />
-                    <button type="submit" className="email-submit-btn">
-                      Stáhnout PDF
+                    <button type="submit" className="signup-button">
+                      Stáhnout zdarma
                     </button>
                   </form>
-                  <p className="email-privacy">🔒 Žádný spam, jen užitečný obsah</p>
+                  
+                  <p className="signup-trust">Bez tlaku. Jen věci, které dávají smysl.</p>
                 </>
               ) : (
-                <div className="email-success">
-                  <p className="success-icon">✅</p>
-                  <p className="success-text">PDF se stahuje! Zkontroluj také e-mail.</p>
+                <div className="signup-success">
+                  <p className="success-message">✓ PDF se stahuje. Děkuji!</p>
                 </div>
               )}
             </div>
