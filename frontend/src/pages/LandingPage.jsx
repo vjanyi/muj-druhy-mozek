@@ -18,6 +18,36 @@ const LandingPage = () => {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [downloadCount, setDownloadCount] = useState(847); // Social proof counter
 
+  // Handle hash navigation on load (especially for Instagram in-app browser)
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      // Check for hash
+      const hash = window.location.hash;
+      // Check for query parameter (better for Instagram)
+      const urlParams = new URLSearchParams(window.location.search);
+      const downloadParam = urlParams.get('download');
+      
+      if (hash === '#download' || downloadParam === 'true') {
+        setTimeout(() => {
+          const element = document.getElementById('download');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500); // Delay to ensure page is fully loaded
+      }
+    };
+
+    // Check on mount
+    handleHashNavigation();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
+  }, []);
+
   const fullText = 'Ale skoro se k nim nevracíš.';
 
   // Typewriter effect
