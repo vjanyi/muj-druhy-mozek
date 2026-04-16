@@ -613,6 +613,50 @@ section {
     padding: 40px 24px 80px;
   }
 
+  /* Story section - compact for mobile */
+  .story-section {
+    padding: 32px 24px 60px !important;
+  }
+
+  .story-section .section-heading {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+  }
+
+  .author-photo-container {
+    margin: 16px 0 12px;
+  }
+
+  .author-photo {
+    width: 110px;
+    height: 110px;
+    border-width: 3px;
+  }
+
+  .story-text {
+    margin: 20px 0 24px;
+  }
+
+  .story-text p {
+    font-size: 1rem;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .story-emphasis {
+    font-size: 1.7rem;
+    margin: 20px auto 0;
+  }
+
+  .about-me-button-container {
+    margin: 20px 0 28px;
+  }
+
+  .about-me-button {
+    padding: 11px 26px;
+    font-size: 0.9rem;
+  }
+
   .use-cases-section {
     scroll-snap-align: none;
     padding: 40px 24px 100px; /* Reduced from 630px */
