@@ -166,7 +166,14 @@ const LandingPage = () => {
     const nextSection = sections[currentIndex + 1];
     
     if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Get the exact position of the next section
+      const sectionTop = nextSection.offsetTop;
+      
+      // Smooth scroll to the exact position
+      window.scrollTo({
+        top: sectionTop,
+        behavior: 'smooth'
+      });
     }
   };
 
