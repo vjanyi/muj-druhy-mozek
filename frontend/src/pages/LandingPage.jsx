@@ -3,6 +3,7 @@ import { Button } from '../components/ui/button';
 import confetti from 'canvas-confetti';
 import ThankYouPage from '../components/ThankYouPage';
 import PrivacyPolicy from '../components/PrivacyPolicy';
+import AboutMe from '../components/AboutMe';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -16,6 +17,7 @@ const LandingPage = () => {
   const [showThankYou, setShowThankYou] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showAboutMe, setShowAboutMe] = useState(false);
   const [downloadCount, setDownloadCount] = useState(847); // Social proof counter
 
   // Handle hash navigation on load (especially for Instagram in-app browser)
@@ -423,6 +425,15 @@ const LandingPage = () => {
           <div className="section-content">
             <h2 className="section-heading">Neučím software.<br />Učím klid.</h2>
             
+            {/* Author Photo */}
+            <div className="author-photo-container">
+              <img 
+                src="/author-photo.jpg" 
+                alt="Jana - Můj druhý mozek" 
+                className="author-photo"
+              />
+            </div>
+            
             <div className="story-text">
               <p>
                 Jsem marketingová ředitelka<br />
@@ -437,6 +448,14 @@ const LandingPage = () => {
                 Jen mi chyběl systém.
               </p>
             </div>
+            
+            {/* About Me Button */}
+            <button 
+              className="about-me-button"
+              onClick={() => setShowAboutMe(true)}
+            >
+              Více o mně a o mém projektu
+            </button>
             
             {/* Scroll indicator */}
             <div className="subline-arrow" onClick={() => scrollToNextSection(3)}>
@@ -708,6 +727,11 @@ const LandingPage = () => {
       {/* Privacy Policy Modal */}
       {showPrivacyPolicy && (
         <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
+      )}
+      
+      {/* About Me Modal */}
+      {showAboutMe && (
+        <AboutMe onClose={() => setShowAboutMe(false)} />
       )}
     </div>
   );
