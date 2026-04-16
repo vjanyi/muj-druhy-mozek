@@ -592,15 +592,43 @@ section {
 
 /* Use Cases Section - Align to top on mobile */
 .use-cases-section {
-  padding: 12px 24px 630px;
+  padding: 12px 24px 120px; /* Default for desktop, mobile overrides below */
   background: var(--bg-primary);
   transition: background-color 0.3s ease;
 }
 
 /* Mobile-specific: remove scroll snap to allow arrow visibility */
 @media (max-width: 768px) {
+  /* General section padding optimization */
+  section {
+    padding: 60px 24px;
+  }
+
+  .hero-section {
+    padding: 100px 24px 80px;
+  }
+
+  .problem-section,
+  .story-section {
+    padding: 40px 24px 80px;
+  }
+
   .use-cases-section {
     scroll-snap-align: none;
+    padding: 40px 24px 100px; /* Reduced from 630px */
+  }
+
+  .benefit-section {
+    padding: 60px 24px 80px;
+  }
+
+  .email-signup-section {
+    padding: 60px 24px 80px;
+    margin: 0; /* Remove extra margins */
+  }
+
+  .final-cta-section {
+    padding: 60px 24px 80px;
   }
   
   .use-cases-section .subline-arrow {
