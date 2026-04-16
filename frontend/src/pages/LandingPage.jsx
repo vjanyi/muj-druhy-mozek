@@ -423,7 +423,7 @@ const LandingPage = () => {
         {/* Story Section */}
         <section className="story-section fade-in" ref={addToRefs}>
           <div className="section-content">
-            <h2 className="section-heading">Neučím software.<br />Učím klid.</h2>
+            <h2 className="section-heading">Tohle je můj příběh.</h2>
             
             {/* Author Photo */}
             <div className="author-photo-container">
@@ -436,7 +436,7 @@ const LandingPage = () => {
             
             <div className="story-text">
               <p>
-                Jsem marketingová ředitelka<br />
+                Jsem manažerka<br />
                 a dlouho jsem narážela na to,<br />
                 že se nemůžu spoléhat jen na svou paměť.
               </p>
