@@ -435,6 +435,7 @@ const LandingPage = () => {
             </div>
             
             <div className="story-text">
+              <p>Jmenuju se Jana.</p>
               <p>
                 Jsem manažerka<br />
                 a dlouho jsem narážela na to,<br />
