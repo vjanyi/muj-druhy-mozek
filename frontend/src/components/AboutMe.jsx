@@ -10,86 +10,44 @@ const AboutMe = ({ onClose }) => {
         </button>
         
         <div className="about-story">
-          <p className="about-paragraph">Možná to znáš.</p>
-          
           <p className="about-paragraph">
-            Máš v hlavě spoustu věcí.<br />
-            Nápady, úkoly, rozhodnutí.
+            Dělám marketingovou manažerku ve střední firmě už skoro 10 let. Denně řeším desítky věcí – porady, nápady, rozhodnutí. A dlouho jsem narážela na jedno: nemohla jsem se spoléhat jen na svou paměť.
           </p>
           
           <p className="about-paragraph">
-            A pořád máš pocit,<br />
-            že na něco zapomínáš.
-          </p>
-          
-          <div className="about-divider">—</div>
-          
-          <p className="about-paragraph">Jmenuju se Jana.</p>
-          
-          <p className="about-paragraph">
-            A dlouho jsem si myslela,<br />
-            že mám prostě špatnou paměť.
+            V práci to byly situace typu „někde to mám", „už jsme to řešili", „vím, že jsem to viděla"… ale nevěděla jsem kde.
           </p>
           
           <p className="about-paragraph">
-            Že si neumím věci zapamatovat.<br />
-            Že nejsem dost organizovaná.
-          </p>
-          
-          <div className="about-divider">—</div>
-          
-          <p className="about-paragraph">Někdy jsem si věci zapisovala.</p>
-          
-          <p className="about-paragraph">
-            Ale pak jsem nevěděla kde.<br />
-            Nebo jsem se k nim nevrátila.
-          </p>
-          
-          <p className="about-paragraph">A často jsem začínala znovu.</p>
-          
-          <div className="about-divider">—</div>
-          
-          <p className="about-paragraph">
-            Pak přišlo období,<br />
-            kdy jsem potřebovala mít věci pod kontrolou víc než dřív.
+            A pak i doma. Jakou barvu jsme vybírali? Co mi přesně řekl lékař? Na čem jsme se domluvili? Detaily, které jsou vlastně důležité.
           </p>
           
           <p className="about-paragraph">
-            A tehdy mi došlo,<br />
-            že to není pamětí.
+            Začala jsem si věci zapisovat. Ale každý jinam – poznámky, papíry, aplikace. A výsledek? Stejný chaos. Jen na víc místech.
           </p>
           
-          <div className="about-divider">—</div>
-          
-          <p className="about-paragraph emphasis">Chyběl mi systém.</p>
-          
-          <div className="about-divider">—</div>
-          
-          <p className="about-paragraph">Začala jsem si ho tvořit.</p>
+          <p className="about-paragraph emphasis">
+            A pak mi došlo, že to není pamětí.<br />
+            Jen mi chyběl systém.
+          </p>
           
           <p className="about-paragraph">
-            Jednoduše.<br />
-            Postupně.<br />
-            Podle sebe.
+            Začala jsem si ho tvořit. Jednoduše, postupně, podle sebe.
           </p>
-          
-          <div className="about-divider">—</div>
-          
-          <p className="about-paragraph">Dnes už nezačínám od nuly.</p>
           
           <p className="about-paragraph">
-            Vím, kde co mám.<br />
-            Vím, kam sáhnout.
+            Dnes už nezačínám od nuly. Vím, kde co mám. Vím, kam se vrátit. A hlavně – nemusím si všechno pamatovat.
           </p>
-          
-          <p className="about-paragraph">A hlavně — mám klid.</p>
-          
-          <div className="about-divider">—</div>
           
           <p className="about-paragraph final">
-            A pokud to máš podobně,<br /><br />
-            jsi tu správně.
+            A ten klid, který to přinese, ten za to stojí.<br /><br />
+            A pokud to máš podobně, jsi tu správně.
           </p>
+          
+          {/* Back to Website Button */}
+          <button className="back-to-website-btn" onClick={onClose}>
+            Zpátky na web
+          </button>
         </div>
       </div>
     </div>
