@@ -547,7 +547,7 @@ const LandingPage = () => {
             
             {/* GDPR Notice */}
             <p className="email-gdpr-notice">
-              🔒 Váš e-mail je u nás v bezpečí. Vždy ctíme{' '}
+              🔒 Tvůj e-mail je u nás v bezpečí. Vždy ctíme{' '}
               <button 
                 className="privacy-link-inline" 
                 onClick={() => setShowPrivacyPolicy(true)}
