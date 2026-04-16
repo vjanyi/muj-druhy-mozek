@@ -270,12 +270,27 @@ const LandingPage = () => {
       </button>
 
       <main>
+        {/* SEO H1 - visually hidden but accessible to search engines */}
+        <h1 style={{ 
+          position: 'absolute', 
+          width: '1px', 
+          height: '1px', 
+          padding: 0, 
+          margin: '-1px', 
+          overflow: 'hidden', 
+          clip: 'rect(0, 0, 0, 0)', 
+          whiteSpace: 'nowrap', 
+          border: 0 
+        }}>
+          Jak si organizovat poznámky a myšlenky
+        </h1>
+        
         {/* Hero Section */}
         <section className="hero-section fade-in" ref={addToRefs}>
           <div className="graphic-dot"></div>
-          <h1 className="hero-title">
+          <h2 className="hero-title">
             Píšeš si poznámky.
-          </h1>
+          </h2>
           <p className="hero-subtitle typewriter">
             {typewriterText}
             <span className="typewriter-cursor">|</span>
