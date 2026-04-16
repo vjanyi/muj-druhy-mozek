@@ -8,6 +8,7 @@
 html {
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for anchor links */
 }
 
 /* Scroll Progress Bar */

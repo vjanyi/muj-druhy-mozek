@@ -508,7 +508,7 @@ const LandingPage = () => {
         </section>
 
         {/* Email Signup Section */}
-        <section className="email-signup-section fade-in" ref={addToRefs}>
+        <section id="download" className="email-signup-section fade-in" ref={addToRefs}>
           <div className="section-content">
             <div className="graphic-dot"></div>
             
