@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '../components/ui/button';
 import confetti from 'canvas-confetti';
 import ThankYouPage from '../components/ThankYouPage';
+import PrivacyPolicy from '../components/PrivacyPolicy';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -14,6 +15,7 @@ const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [downloadCount, setDownloadCount] = useState(847); // Social proof counter
 
   const fullText = 'Ale skoro se k nim nevracíš.';
@@ -664,7 +666,16 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <p className="footer-text">Můj druhý mozek • 2026</p>
+        <p className="footer-text">
+          Můj druhý mozek • 2025 • 
+          <button 
+            className="privacy-link" 
+            onClick={() => setShowPrivacyPolicy(true)}
+            aria-label="Zásady ochrany osobních údajů"
+          >
+            Ochrana osobních údajů (GDPR)
+          </button>
+        </p>
       </footer>
 
       {/* Back to Top Button */}
@@ -683,6 +694,11 @@ const LandingPage = () => {
       {/* Thank You Page Modal */}
       {showThankYou && (
         <ThankYouPage onClose={() => setShowThankYou(false)} />
+      )}
+      
+      {/* Privacy Policy Modal */}
+      {showPrivacyPolicy && (
+        <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
       )}
     </div>
   );

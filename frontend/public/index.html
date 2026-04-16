@@ -45,9 +45,17 @@
         <!-- Favicon -->
         <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
         
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+        
         <!-- Open Graph Image -->
-        <meta property="og:image" content="%PUBLIC_URL%/og-image.svg" />
-        <meta property="twitter:image" content="%PUBLIC_URL%/og-image.svg" />
+        <meta property="og:image" content="https://www.mujdruhymozek.cz/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="twitter:image" content="https://www.mujdruhymozek.cz/og-image.png" />
         
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-42R17NK4JX"></script>
@@ -105,6 +113,106 @@
           ]
         }
         </script>
+        
+        <!-- HowTo Schema - 5 kroků k druhému mozku -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "Jak si vytvořit druhý mozek - 5 prvních kroků",
+          "description": "Praktický návod, jak si organizovat poznámky a myšlenky pomocí systému druhého mozku. Bez složitých nástrojů, v reálném životě.",
+          "image": "https://www.mujdruhymozek.cz/og-image.png",
+          "totalTime": "PT30M",
+          "supply": [
+            {
+              "@type": "HowToSupply",
+              "name": "Poznámkový systém (digitální nebo papírový)"
+            }
+          ],
+          "tool": [
+            {
+              "@type": "HowToTool",
+              "name": "Aplikace pro poznámky nebo papírový notes"
+            }
+          ],
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Krok 1: Začni zachycovat",
+              "text": "Zachyť všechny nápady, úkoly a informace na jedno místo. Neřeš zatím organizaci.",
+              "url": "https://www.mujdruhymozek.cz/#krok-1"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Krok 2: Organizuj jednoduše",
+              "text": "Vytvoř si základní kategorie pro své poznámky. Začni s 3-5 hlavními oblastmi.",
+              "url": "https://www.mujdruhymozek.cz/#krok-2"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Krok 3: Pravidelně procházej",
+              "text": "Nastav si týdenní rutinu na procházení poznámek. 15 minut týdně stačí.",
+              "url": "https://www.mujdruhymozek.cz/#krok-3"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Krok 4: Propojuj informace",
+              "text": "Hledej souvislosti mezi poznámkami. Vytváření propojení je klíčem k pochopení.",
+              "url": "https://www.mujdruhymozek.cz/#krok-4"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Krok 5: Využívej poznatky",
+              "text": "Vracej se k poznámkám když řešíš problémy nebo tvoříš něco nového.",
+              "url": "https://www.mujdruhymozek.cz/#krok-5"
+            }
+          ]
+        }
+        </script>
+        
+        <!-- DigitalDocument Schema - PDF ke stažení -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "DigitalDocument",
+          "name": "Můj druhý mozek - 5 kroků jak přestat vše držet v hlavě",
+          "description": "Praktický e-book s 5 prvními kroky, jak začít s budováním vlastního druhého mozku. Obsahuje příklady z praxe.",
+          "author": {
+            "@type": "Person",
+            "name": "Můj druhý mozek"
+          },
+          "encodingFormat": "application/pdf",
+          "url": "https://www.mujdruhymozek.cz/druhy-mozek-guide.pdf",
+          "potentialAction": {
+            "@type": "DownloadAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.mujdruhymozek.cz/druhy-mozek-guide.pdf",
+              "actionPlatform": [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform"
+              ]
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CZK",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+        </script>
+        
+        <!-- Seznam.cz Meta Tags (pokud se používají) -->
+        <meta name="cz.seznam.wmt" content="verification_token_zde" />
+        
+        <!-- GDPR & Privacy -->
+        <meta name="privacy-policy" content="https://www.mujdruhymozek.cz/privacy-policy" />
         
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
