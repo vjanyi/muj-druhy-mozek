@@ -546,9 +546,13 @@ section {
   box-shadow: 0 12px 32px rgba(244, 162, 97, 0.3);
 }
 
+.about-me-button-container {
+  text-align: center;
+  margin: 32px 0 48px;
+}
+
 .about-me-button {
   display: inline-block;
-  margin: 32px auto 48px;
   padding: 14px 32px;
   background: transparent;
   border: 2px solid var(--accent);
@@ -559,7 +563,6 @@ section {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-align: center;
 }
 
 .about-me-button:hover {

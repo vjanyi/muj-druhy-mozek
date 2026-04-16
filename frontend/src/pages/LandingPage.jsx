@@ -450,12 +450,14 @@ const LandingPage = () => {
             </div>
             
             {/* About Me Button */}
-            <button 
-              className="about-me-button"
-              onClick={() => setShowAboutMe(true)}
-            >
-              Více o mně a o mém projektu
-            </button>
+            <div className="about-me-button-container">
+              <button 
+                className="about-me-button"
+                onClick={() => setShowAboutMe(true)}
+              >
+                Více o mém příběhu
+              </button>
+            </div>
             
             {/* Scroll indicator */}
             <div className="subline-arrow" onClick={() => scrollToNextSection(3)}>
