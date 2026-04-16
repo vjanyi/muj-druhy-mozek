@@ -474,7 +474,7 @@ section {
 /* Problem Section */
 .problem-section {
   background: var(--bg-primary);
-  padding: 120px 24px;
+  padding: 40px 24px 160px;
   transition: background-color 0.3s ease;
 }
 
@@ -514,7 +514,7 @@ section {
 
 /* Story Section */
 .story-section {
-  padding: 120px 24px;
+  padding: 40px 24px 160px;
   background: var(--bg-secondary);
   transition: background-color 0.3s ease;
 }
@@ -544,7 +544,39 @@ section {
 
 /* Use Cases Section - Align to top on mobile */
 .use-cases-section {
-  scroll-snap-align: start;
+  padding: 12px 24px 630px;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Mobile-specific: remove scroll snap to allow arrow visibility */
+@media (max-width: 768px) {
+  .use-cases-section {
+    scroll-snap-align: none;
+  }
+  
+  .use-cases-section .subline-arrow {
+    margin-top: -120px;
+  }
+  
+  .use-cases-grid {
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .use-case-card {
+    padding: 14px 14px;
+  }
+  
+  .use-case-title {
+    margin-bottom: 4px;
+    font-size: 1.5rem !important;
+  }
+  
+  .use-case-text {
+    font-size: 0.875rem !important;
+    line-height: 1.4;
+  }
 }
 
 .use-cases-grid {
@@ -1223,6 +1255,15 @@ section {
     padding: 160px 40px 120px;
   }
 
+  .problem-section,
+  .story-section {
+    padding: 100px 40px 120px;
+  }
+  
+  .use-cases-section {
+    padding: 60px 40px 180px;
+  }
+
   .use-cases-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -1246,7 +1287,11 @@ section {
   .problem-section,
   .story-section,
   .benefit-section {
-    padding: 140px 60px;
+    padding: 120px 60px 140px;
+  }
+  
+  .use-cases-section {
+    padding: 80px 60px 200px;
   }
 
   .final-cta-section {
