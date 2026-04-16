@@ -545,6 +545,19 @@ const LandingPage = () => {
               </Button>
             </form>
             
+            {/* GDPR Notice */}
+            <p className="email-gdpr-notice">
+              🔒 Váš e-mail je u nás v bezpečí. Vždy ctíme{' '}
+              <button 
+                className="privacy-link-inline" 
+                onClick={() => setShowPrivacyPolicy(true)}
+                aria-label="Otevřít Ochranu osobních údajů"
+              >
+                Ochranu osobních údajů
+              </button>
+              .
+            </p>
+            
             {emailSubmitted && (
               <p className="email-success-message">
                 ✓ Hotovo! PDF se právě stahuje do vašeho zařízení.
@@ -666,16 +679,14 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <p className="footer-text">
-          Můj druhý mozek • 2025 • 
-          <button 
-            className="privacy-link" 
-            onClick={() => setShowPrivacyPolicy(true)}
-            aria-label="Zásady ochrany osobních údajů"
-          >
-            Ochrana osobních údajů (GDPR)
-          </button>
-        </p>
+        <p className="footer-text">Můj druhý mozek • 2025</p>
+        <button 
+          className="privacy-link-footer" 
+          onClick={() => setShowPrivacyPolicy(true)}
+          aria-label="Zásady ochrany osobních údajů"
+        >
+          Ochrana osobních údajů
+        </button>
       </footer>
 
       {/* Back to Top Button */}
