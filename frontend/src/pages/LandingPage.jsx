@@ -5,7 +5,6 @@ import ThankYouPage from '../components/ThankYouPage';
 import PrivacyPolicy from '../components/PrivacyPolicy';
 import AboutMe from '../components/AboutMe';
 import RealExamples from '../components/sections/RealExamples';
-import UseCases from '../components/sections/UseCases';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -486,9 +485,6 @@ const LandingPage = () => {
 
         {/* Real Examples Section - Before & After */}
         <RealExamples addToRefs={addToRefs} scrollToNextSection={scrollToNextSection} sectionIndex={4} />
-
-        {/* Use Cases Section */}
-        <UseCases addToRefs={addToRefs} scrollToNextSection={scrollToNextSection} sectionIndex={5} />
 
         {/* Benefit Section */}
         <section className="benefit-section fade-in" ref={addToRefs}>
