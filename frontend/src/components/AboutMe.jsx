@@ -40,7 +40,7 @@ const AboutMe = ({ onClose }) => {
           </p>
           
           <p className="about-paragraph">
-            Dnes už nezačínám od nuly. Vím, kde co mám. Vím, kam se vrátit. A hlavně – nemusím si všechno pamatovat.
+            Dnes už nezačínám od nuly. Vím, kde co mám. Vím, kam se vrátit. A hlavně – <strong>nemusím si všechno pamatovat.</strong>
           </p>
           
           <p className="about-paragraph final">
