@@ -115,7 +115,7 @@ const RealExamples = ({ addToRefs, scrollToNextSection, sectionIndex }) => {
                 <span className="label-text">bez systému</span>
               </div>
               <p className="card-content">
-                Potkáš kamarádku po půl roce. Pamatuješ si, že řešila něco v práci, ale nevíš co. Nevíš, jak se jmenují její děti, a tak se raději ptáš obecně: „Jak se mají malí?". Cítíš se povrchně, i když ji máš ráda. Detaily ti protékají mezi prsty.
+                Potkáš kamarádku po půl roce. Pamatuješ si, že řešila něco v práci, ale nevíš co. Nevzpomeneš si, jak se jmenuje její dítě, a tak se raději ptáš obecně: „Jak se má malá?". Cítíš se povrchně, i když ji máš ráda. Detaily ti protékají mezi prsty.
               </p>
             </div>
             
