@@ -12,7 +12,7 @@ const RealExamples = ({ addToRefs, scrollToNextSection, sectionIndex }) => {
           <div className="example-header">
             <span className="example-icon">🎨</span>
             <h3 className="example-title">Barvy a nátěry</h3>
-            <p className="example-scenario">Je sobotu, jdu natřít/obnovit dřevěný vyvýšený záhon.</p>
+            <p className="example-scenario">Je sobota, jdeš natřít/obnovit dřevěný vyvýšený záhon</p>
           </div>
           
           <div className="example-comparison">
