@@ -11,7 +11,11 @@ const AboutMe = ({ onClose }) => {
         
         <div className="about-story">
           <p className="about-paragraph">
-            Dělám marketingovou manažerku ve střední firmě už skoro 10 let. Denně řeším desítky věcí – porady, nápady, rozhodnutí. A dlouho jsem narážela na jedno: nemohla jsem se spoléhat jen na svou paměť.
+            Jmenuji se Jana.
+          </p>
+          
+          <p className="about-paragraph">
+            Jsem marketingová manažerka ve střední firmě už skoro 10 let. Denně řeším desítky věcí – porady, nápady, rozhodnutí. A dlouho jsem narážela na jedno: nemohla jsem se spoléhat jen na svou paměť.
           </p>
           
           <p className="about-paragraph">
