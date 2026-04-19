@@ -1465,3 +1465,172 @@ section {
     padding: 160px 60px;
   }
 }
+
+/* ===================================
+   EXAMPLES SECTION - Real Life Examples
+   =================================== */
+
+.examples-section {
+  background: var(--bg-primary);
+  padding: 100px 24px 120px;
+  transition: background-color 0.3s ease;
+}
+
+.examples-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: -16px 0 60px;
+}
+
+.example-block {
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.example-block:last-of-type {
+  margin-bottom: 40px;
+}
+
+.example-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.example-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.example-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.example-scenario {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.example-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.comparison-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.comparison-card.without {
+  border: 2px solid #ddd;
+}
+
+.comparison-card.with {
+  border: 3px solid var(--accent);
+  background: linear-gradient(135deg, rgba(244, 162, 97, 0.03) 0%, rgba(244, 162, 97, 0.08) 100%);
+  box-shadow: 0 8px 24px rgba(244, 162, 97, 0.15);
+}
+
+.comparison-card:hover {
+  transform: translateY(-4px);
+}
+
+.comparison-card.with:hover {
+  box-shadow: 0 12px 32px rgba(244, 162, 97, 0.25);
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.comparison-card.without .card-label {
+  color: #666;
+}
+
+.comparison-card.with .card-label {
+  color: var(--accent);
+}
+
+.label-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.comparison-card.without .label-icon {
+  color: #999;
+}
+
+.comparison-card.with .label-icon {
+  color: var(--accent);
+}
+
+.card-content {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .examples-section {
+    padding: 60px 20px 80px;
+  }
+
+  .examples-subtitle {
+    font-size: 1rem;
+    margin: -12px 0 40px;
+  }
+
+  .example-block {
+    margin-bottom: 60px;
+  }
+
+  .example-icon {
+    font-size: 2.5rem;
+  }
+
+  .example-title {
+    font-size: 1.7rem;
+  }
+
+  .example-scenario {
+    font-size: 0.9rem;
+  }
+
+  .example-comparison {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .comparison-card {
+    padding: 20px;
+  }
+
+  .card-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
