@@ -15,7 +15,7 @@ const AboutMe = ({ onClose }) => {
           </p>
           
           <p className="about-paragraph">
-            Jsem marketingová manažerka ve střední firmě už skoro 10 let. Denně řeším desítky věcí – porady, nápady, rozhodnutí. A dlouho jsem narážela na jedno: nemohla jsem se spoléhat jen na svou paměť.
+            Jsem marketingová manažerka ve střední firmě už skoro 10 let. Denně řeším desítky věcí – porady, nápady, rozhodnutí. A dlouho jsem narážela na jedno: <strong>nemohla jsem se spoléhat jen na svou paměť.</strong>
           </p>
           
           <p className="about-paragraph">
@@ -27,7 +27,7 @@ const AboutMe = ({ onClose }) => {
           </p>
           
           <p className="about-paragraph">
-            Začala jsem si věci zapisovat. Ale každý jinam – poznámky, papíry, aplikace. A výsledek? Stejný chaos. Jen na víc místech.
+            <strong>Začala jsem si věci zapisovat.</strong> Ale každý jinam – poznámky, papíry, aplikace. <strong>A výsledek?</strong> Stejný chaos. Jen na víc místech.
           </p>
           
           <p className="about-paragraph emphasis">
