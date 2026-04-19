@@ -32,7 +32,7 @@ const RealExamples = ({ addToRefs, scrollToNextSection, sectionIndex }) => {
                 <span className="label-text">se systémem</span>
               </div>
               <p className="card-content">
-                Dva kliky v mobilu. Vidíš fotku plechovky, přesný kód barvy i obchod, kde ji mají. Jedeš najisto. Než zapadne slunce, záhony září novotou a ty máš hotovo. A máš klid.
+                Dva kliky v mobilu na poznámky, které sis dělala před 2 lety. Vidíš fotku plechovky, přesný kód barvy i obchod, kde ji mají. Jedeš najisto. Než zapadne slunce, záhony září novotou a ty máš hotovo. A máš klid.
               </p>
             </div>
           </div>
