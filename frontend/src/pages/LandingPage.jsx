@@ -102,7 +102,14 @@ const LandingPage = () => {
       link.click();
 
       if (response.ok) {
-        track('generate_lead', { form_id: 'pdf_guide', form_location: location, lead_source: 'pdf_guide' });
+        const result = await response.json().catch(() => null);
+        if (result?.already_subscribed === false) {
+          track('generate_lead', { form_id: 'pdf_guide', form_location: location, lead_source: 'pdf_guide' });
+        } else if (result?.already_subscribed === true) {
+          track('lead_repeat', { form_id: 'pdf_guide', form_location: location });
+        } else {
+          track('form_error', { form_id: 'pdf_guide', error_type: 'invalid_response' });
+        }
         console.log('Email uložen do ECOMAIL');
         // Increment download counter
         setDownloadCount(prev => prev + 1);
@@ -721,3 +728,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+

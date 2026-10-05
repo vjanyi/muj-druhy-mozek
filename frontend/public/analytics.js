@@ -5,12 +5,22 @@
   var key = 'mozek_analytics_consent_v1';
   var maxAge = 180 * 24 * 60 * 60 * 1000;
   var production = /^(www\.)?mujdruhymozek\.cz$/.test(location.hostname);
+  // Explicit opt-in QA mode persists only in this browser, without sending data to GA.
+  var testMode = false;
+  try {
+    var testChoice = new URLSearchParams(location.search).get('analytics_test');
+    if (testChoice === '1' || testChoice === '0') {
+      localStorage.setItem('mozek_analytics_test', testChoice);
+    }
+    testMode = localStorage.getItem('mozek_analytics_test') === '1';
+  } catch (_) { testMode = new URLSearchParams(location.search).get('analytics_test') === '1'; }
   var consent = null;
   var loaded = false;
   var startedForms = new WeakSet();
   var depths = new Set();
   var allowed = {
     generate_lead: ['form_id', 'form_location', 'lead_source'],
+    lead_repeat: ['form_id', 'form_location'],
     file_download: ['file_name', 'file_extension', 'download_source'],
     form_start: ['form_id'],
     form_error: ['form_id', 'error_type'],
@@ -33,7 +43,7 @@
     ad_user_data: 'denied', ad_personalization: 'denied'
   });
   function track(name, params) {
-    if (!production || consent !== 'granted' || !allowed[name]) return;
+    if (!production || testMode || consent !== 'granted' || !allowed[name]) return;
     var safe = {};
     allowed[name].forEach(function (field) {
       var value = params && params[field];
@@ -43,7 +53,7 @@
     window.gtag('event', name, safe);
   }
   function start() {
-    if (loaded || !production || consent !== 'granted') return;
+    if (loaded || !production || testMode || consent !== 'granted') return;
     loaded = true;
     window.gtag('js', new Date());
     // Keep campaign attribution, discard arbitrary URL parameters and fragments.
@@ -67,7 +77,7 @@
     if (persist !== false) {
       try { localStorage.setItem(key, JSON.stringify({value: value, time: Date.now()})); } catch (_) {}
     }
-    window['ga-disable-' + id] = value !== 'granted';
+    window['ga-disable-' + id] = testMode || value !== 'granted';
     window.gtag('consent', 'update', {analytics_storage: value});
     if (value === 'granted') start();
     else {
@@ -163,3 +173,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready);
   else ready();
 })();
+
