@@ -41,7 +41,10 @@ export default async function handler(req, res) {
     }
 
     // ECOMAIL API configuration
-    const ECOMAIL_API_KEY = process.env.ECOMAIL_API_KEY || '2b0adccba47da8496b64d51b80521f8d5a3c4ed03efccf015d92de2fd35cf86a';
+    const ECOMAIL_API_KEY = process.env.ECOMAIL_API_KEY;
+    if (!ECOMAIL_API_KEY) {
+      return res.status(503).json({ error: 'Service unavailable', message: 'Přihlášení k odběru je dočasně nedostupné.' });
+    }
     const ECOMAIL_LIST_ID = process.env.ECOMAIL_LIST_ID || '1';
     const ECOMAIL_API_URL = 'https://api2.ecomailapp.cz';
 
