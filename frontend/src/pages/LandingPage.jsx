@@ -213,7 +213,7 @@ const LandingPage = () => {
     const shareData = {
       title: 'Můj druhý mozek',
       text: 'Zapomínáš nápady? Podívej se na systém, který funguje!',
-      url: window.location.href
+      url: 'https://www.mujdruhymozek.cz/'
     };
 
     try {
@@ -222,7 +222,7 @@ const LandingPage = () => {
         track('share', { method: 'native', content_type: 'website', item_id: 'landing_page' });
       } else {
         // Fallback: Copy to clipboard
-        await navigator.clipboard.writeText(window.location.href);
+        await navigator.clipboard.writeText('https://www.mujdruhymozek.cz/');
         track('share', { method: 'clipboard', content_type: 'website', item_id: 'landing_page' });
         alert('✅ Link zkopírován!');
       }
@@ -668,7 +668,7 @@ const LandingPage = () => {
                 </a>
                 
                 <a 
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mujdruhymozek.cz%2F"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="share-button share-facebook"
