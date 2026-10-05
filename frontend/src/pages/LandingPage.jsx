@@ -7,6 +7,8 @@ import AboutMe from '../components/AboutMe';
 import RealExamples from '../components/sections/RealExamples';
 import './LandingPage.css';
 
+const track = (name, params) => window.mozekAnalytics?.track(name, params);
+
 const LandingPage = () => {
   const sectionsRef = useRef([]);
   const [darkMode, setDarkMode] = useState(false);
@@ -71,6 +73,7 @@ const LandingPage = () => {
   // Email form handler with loading states
   const handleEmailSubmit = async (e, location) => {
     e.preventDefault();
+    if (isLoading || emailSubmitted) return;
     
     if (!email || !email.includes('@')) {
       alert('Prosím zadejte platný e-mail');
@@ -91,6 +94,7 @@ const LandingPage = () => {
         })
       });
 
+      track('file_download', { file_name: 'druhy-mozek-guide.pdf', file_extension: 'pdf', download_source: 'pdf_guide' });
       // Download PDF regardless of API success
       const link = document.createElement('a');
       link.href = '/druhy-mozek-guide.pdf';
@@ -98,10 +102,12 @@ const LandingPage = () => {
       link.click();
 
       if (response.ok) {
+        track('generate_lead', { form_id: 'pdf_guide', form_location: location, lead_source: 'pdf_guide' });
         console.log('Email uložen do ECOMAIL');
         // Increment download counter
         setDownloadCount(prev => prev + 1);
       } else {
+        track('form_error', { form_id: 'pdf_guide', error_type: 'api_rejected' });
         console.warn('ECOMAIL API selhalo, ale PDF staženo');
       }
       
@@ -122,6 +128,8 @@ const LandingPage = () => {
     } catch (error) {
       console.error('Chyba:', error);
       
+      track('form_error', { form_id: 'pdf_guide', error_type: 'network_error' });
+      track('file_download', { file_name: 'druhy-mozek-guide.pdf', file_extension: 'pdf', download_source: 'pdf_guide' });
       // Download PDF even on error
       const link = document.createElement('a');
       link.href = '/druhy-mozek-guide.pdf';
@@ -180,6 +188,7 @@ const LandingPage = () => {
 
   // Confetti celebration on CTA click
   const handleCTAClick = () => {
+    track('cta_click', { cta_name: 'instagram', cta_location: 'final_cta' });
     // Trigger confetti
     confetti({
       particleCount: 100,
@@ -203,9 +212,11 @@ const LandingPage = () => {
     try {
       if (navigator.share) {
         await navigator.share(shareData);
+        track('share', { method: 'native', content_type: 'website', item_id: 'landing_page' });
       } else {
         // Fallback: Copy to clipboard
         await navigator.clipboard.writeText(window.location.href);
+        track('share', { method: 'clipboard', content_type: 'website', item_id: 'landing_page' });
         alert('✅ Link zkopírován!');
       }
     } catch (err) {
@@ -462,7 +473,7 @@ const LandingPage = () => {
             <div className="about-me-button-container">
               <button 
                 className="about-me-button"
-                onClick={() => setShowAboutMe(true)}
+                onClick={() => { track('view_content', { content_type: 'story', content_id: 'about_me' }); setShowAboutMe(true); }}
               >
                 Více o mém příběhu
               </button>
