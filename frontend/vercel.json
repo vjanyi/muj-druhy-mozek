@@ -37,5 +37,29 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mujdruhymozek\\.cz"
+        }
+      ],
+      "destination": "https://mojeseverka.cz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www\\.mujdruhymozek\\.cz"
+        }
+      ],
+      "destination": "https://mojeseverka.cz/",
+      "statusCode": 301
+    }
   ]
 }
